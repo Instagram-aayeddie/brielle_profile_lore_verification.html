@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brielle<3 XD - Profile & Lore Interactive</title>
+    <!-- Tailwind CSS for modern utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for clean, modern icon accents -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter for clean UI, Fredoka for playful headers -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ffc0cb 0%, #e8dbfc 50%, #add8e6 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        
+        .fun-font {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Translucent glass container styling */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+        }
+
+        .discord-glass {
+            background: rgba(17, 18, 20, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Animated progress bar transition effect */
+        .progress-bar-fill {
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-between p-4 overflow-x-hidden relative">
+
+    <!-- Sweet colorful background decorations mimicking the donut dog aesthetics -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <!-- Floating Donut 1 -->
+        <div class="absolute top-[12%] left-[6%] w-16 h-16 opacity-30 animate-bounce" style="animation-duration: 7s;">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="40" fill="#ff69b4" stroke="#ff1493" stroke-width="4"/>
+                <circle cx="50" cy="50" r="15" fill="#e8dbfc"/>
+                <rect x="35" y="30" width="8" height="4" rx="2" fill="#fff" transform="rotate(15 35 30)"/>
+                <rect x="60" y="35" width="8" height="4" rx="2" fill="#ffff00" transform="rotate(-30 60 35)"/>
+                <rect x="45" y="65" width="8" height="4" rx="2" fill="#00ffff" transform="rotate(45 45 65)"/>
+            </svg>
+        </div>
+        <!-- Floating Donut 2 -->
+        <div class="absolute bottom-[12%] right-[8%] w-24 h-24 opacity-25 animate-pulse" style="animation-duration: 5s;">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="40" fill="#33ccff" stroke="#0099ff" stroke-width="4"/>
+                <circle cx="50" cy="50" r="15" fill="#ffc0cb"/>
+                <rect x="30" y="40" width="8" height="4" rx="2" fill="#ff69b4" transform="rotate(25 30 40)"/>
+                <rect x="65" y="55" width="8" height="4" rx="2" fill="#ffff00" transform="rotate(-15 65 55)"/>
+            </svg>
+        </div>
+        <!-- Glowing sparkles -->
+        <div class="absolute top-[35%] right-[10%] w-8 h-8 opacity-40 animate-spin" style="animation-duration: 9s;">
+            <i class="fa-solid fa-sparkles text-yellow-400 text-3xl"></i>
+        </div>
+        <div class="absolute bottom-[35%] left-[10%] w-6 h-6 opacity-30 animate-spin" style="animation-duration: 14s;">
+            <i class="fa-solid fa-star text-pink-400 text-xl"></i>
+        </div>
+    </div>
+
+    <header class="w-full max-w-5xl z-10 flex flex-col sm:flex-row justify-between items-center gap-4 py-4 border-b border-white/25">
+        <div class="flex items-center gap-3">
+            <div class="bg-white/50 p-2 rounded-2xl flex items-center justify-center shadow-sm">
+                <span class="text-2xl">🍩</span>
+            </div>
+            <div>
+                <h1 class="text-2xl font-black fun-font text-pink-700 tracking-wide drop-shadow-sm">Brielle's Space</h1>
+                <p class="text-xs text-blue-800 font-semibold">Interactive Discord Mock & Lore Verification</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-2 bg-white/55 backdrop-blur-md px-4 py-2 rounded-full shadow-sm text-sm border border-white/40">
+            <span class="flex h-3 w-3 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+            <span class="font-bold text-gray-700">Aura Score: <span id="auraScore" class="text-pink-600">1000</span></span>
+        </div>
+    </header>
+
+    <main class="w-full max-w-5xl z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 my-6 flex-grow items-start">
+        
+        <!-- LEFT PANEL: Authentic Discord Profile Replica from Screenshot 2026-05-28 091107.jpg -->
+        <section class="lg:col-span-5 w-full flex flex-col gap-4">
+            
+            <div class="text-xs font-bold uppercase tracking-wider text-pink-700/90 px-2 flex items-center gap-1.5">
+                <i class="fa-brands fa-discord"></i> Discord Profile
+            </div>
+
+            <div class="discord-glass rounded-2xl overflow-hidden shadow-2xl relative transition-transform duration-300 hover:scale-[1.01]">
+                
+                <!-- Profile Banner Gradient representing screenshot 1's pastel hues -->
+                <div class="h-28 bg-gradient-to-r from-pink-400 via-orange-300 to-sky-300 relative">
+                    <div class="absolute top-2 right-2 bg-black/40 text-[10px] text-white/90 px-2.5 py-0.5 rounded-full font-bold">
+                        Custom Theme
+                    </div>
+                </div>
+
+                <!-- Profile Contents -->
+                <div class="px-4 pb-5 pt-1 flex flex-col relative">
+                    
+                    <!-- Avatar Area overlapping banner -->
+                    <div class="relative -mt-16 mb-2">
+                        <div class="w-24 h-24 rounded-full bg-[#111214] p-1.5 inline-block relative">
+                            <!-- High fidelity SVG reproducing the Chihuahua with pink bow/bunny ears from Screenshot 2026-05-28 091107.jpg -->
+                            <div class="w-full h-full rounded-full overflow-hidden bg-rose-50 flex items-center justify-center border border-pink-200">
+                                <svg viewBox="0 0 100 100" class="w-full h-full">
+                                    <defs>
+                                        <clipPath id="circleClip">
+                                            <circle cx="50" cy="50" r="50" />
+                                        </clipPath>
+                                    </defs>
+                                    <g clip-path="url(#circleClip)">
+                                        <!-- Soft pastel background -->
+                                        <rect width="100" height="100" fill="#fbe8eb" />
+                                        
+                                        <!-- White bunny ears behind chihuahua head -->
+                                        <!-- Left ear -->
+                                        <ellipse cx="38" cy="24" rx="8" ry="21" fill="#fff" stroke="#ffb6c1" stroke-width="1.5" transform="rotate(-15 38 24)"/>
+                                        <ellipse cx="38" cy="24" rx="4" ry="14" fill="#ffb6c1" transform="rotate(-15 38 24)"/>
+                                        <!-- Right ear -->
+                                        <ellipse cx="62" cy="24" rx="8" ry="21" fill="#fff" stroke="#ffb6c1" stroke-width="1.5" transform="rotate(15 62 24)"/>
+                                        <ellipse cx="62" cy="24" rx="4" ry="14" fill="#ffb6c1" transform="rotate(15 62 24)"/>
+
+                                        <!-- Chihuahua head -->
+                                        <path d="M 22 47 L 12 32 L 28 40 Z" fill="#fffff9" stroke="#ebd6c0" stroke-width="1" />
+                                        <path d="M 78 47 L 88 32 L 72 40 Z" fill="#fffff9" stroke="#ebd6c0" stroke-width="1" />
+                                        
+                                        <!-- Head Base -->
+                                        <ellipse cx="50" cy="56" rx="29" ry="25" fill="#ffffff" stroke="#eadecc" stroke-width="0.75"/>
+                                        <ellipse cx="50" cy="63" rx="11" ry="9" fill="#ffffff" />
+                                        
+                                        <!-- Large sweet Chihuahua eyes -->
+                                        <circle cx="37" cy="53" r="5" fill="#291a11" />
+                                        <circle cx="37" cy="51" r="1.5" fill="#ffffff" />
+                                        <circle cx="63" cy="53" r="5" fill="#291a11" />
+                                        <circle cx="63" cy="51" r="1.5" fill="#ffffff" />
+                                        
+                                        <!-- Nose and Mouth -->
+                                        <path d="M 48 61 Q 50 59 52 61 L 50 63 Z" fill="#291a11" />
+                                        <path d="M 48 65 Q 50 67 52 65" stroke="#291a11" stroke-width="0.75" fill="none" />
+                                        
+                                        <!-- Pink Bow under head -->
+                                        <circle cx="50" cy="74" rx="3.5" ry="3.5" fill="#ff1493" />
+                                        <polygon points="50,74 39,70 39,78" fill="#ff69b4" />
+                                        <polygon points="50,74 61,70 61,78" fill="#ff69b4" />
+                                        <path d="M 39 78 Q 43 85 45 92" stroke="#ff69b4" stroke-width="2.5" fill="none" />
+                                        <path d="M 61 78 Q 57 85 55 92" stroke="#ff69b4" stroke-width="2.5" fill="none" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <!-- Discord active online circle indicator -->
+                            <div class="absolute bottom-1 right-1 w-6 h-6 rounded-full bg-[#111214] p-1 flex items-center justify-center">
+                                <div class="w-full h-full rounded-full bg-[#23a55a]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Name & Verified Server BAT Badge -->
+                    <div class="flex items-center flex-wrap gap-2">
+                        <h2 class="text-xl font-bold text-white tracking-wide">Brielle&lt;3 XD</h2>
+                        
+                        <!-- Exact BAT Server Tag mimic from Screenshot 2026-05-28 091107.jpg -->
+                        <div class="inline-flex items-center gap-1.5 bg-[#1e1f22] text-white text-xs font-bold px-2 py-1 rounded-md border border-[#3f4248]/80 hover:bg-[#2b2d31] transition duration-200 cursor-pointer group/badge relative" onclick="triggerEasterEgg('badge')">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                                <polygon points="12,3 16,7 12,11 8,7" fill="#c3c6cb" />
+                                <polygon points="12,11 16,15 12,21 8,15" fill="#e02424" />
+                                <polygon points="8,7 12,11 8,15 4,11" fill="#888c94" />
+                                <polygon points="16,7 20,11 16,15 12,11" fill="#888c94" />
+                                <circle cx="12" cy="11" r="2.5" fill="#ffffff" />
+                            </svg>
+                            <span class="text-[10px] uppercase tracking-wider font-extrabold text-gray-200">BAT</span>
+                            <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black text-[10px] text-white px-2.5 py-1 rounded opacity-0 group-hover/badge:opacity-100 transition-opacity pointer-events-none z-20 shadow-md">
+                                Beat Saber Assessment Team
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Status Text -->
+                    <div class="mt-0.5 text-sm text-gray-400 font-medium">
+                        brielle_donut_slayer
+                    </div>
+
+                    <!-- Status Display matching Screenshot 2026-05-28 091107.jpg -->
+                    <div class="mt-3.5 py-2 px-3 bg-[#1e1f22]/60 rounded-lg border border-white/5 flex items-center gap-2">
+                        <span class="text-xs">🍪</span>
+                        <span class="text-sm font-semibold text-gray-100" id="profileStatus">brownies</span>
+                    </div>
+
+                    <hr class="border-white/10 my-4">
+
+                    <!-- Profile Bio -->
+                    <div class="space-y-4 text-xs">
+                        <div>
+                            <div class="font-extrabold uppercase text-gray-400 tracking-wider mb-1">About Me</div>
+                            <p class="text-gray-200 leading-relaxed text-sm">
+                                Dedicated brownie taxonomist, Beat Saber elite level division (<span class="text-pink-400 font-bold">BAT</span> team mod), and professional yapper. Mewing instructor in training.
+                            </p>
+                        </div>
+
+                        <div>
+                            <div class="font-extrabold uppercase text-gray-400 tracking-wider mb-1">Roles</div>
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="bg-pink-900/40 text-pink-300 px-2.5 py-1 rounded text-[10px] font-bold">🎀 YAPPER CLASS</span>
+                                <span class="bg-blue-900/40 text-blue-300 px-2.5 py-1 rounded text-[10px] font-bold">🍩 DONUT DEFENDER</span>
+                                <span class="bg-purple-900/40 text-purple-300 px-2.5 py-1 rounded text-[10px] font-bold">👾 BEAT SABER PRO</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-extrabold uppercase text-gray-400 tracking-wider mb-1.5">Note (Click to customize)</div>
+                            <textarea id="discordNote" class="w-full bg-[#1e1f22]/70 text-gray-300 border border-transparent focus:border-pink-400 focus:outline-none p-2.5 rounded text-xs transition h-14 resize-none" placeholder="Add custom notes about Brielle..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom 8-Bit Tone Synthesis Soundboard -->
+            <div class="glass-panel rounded-2xl p-4 flex flex-col gap-2">
+                <h3 class="text-xs font-bold text-pink-700 flex items-center gap-1.5 uppercase tracking-wide">
+                    <i class="fa-solid fa-volume-high"></i> Tone Synthesizer
+                </h3>
+                <p class="text-[11px] text-gray-600">Interact with her browser's custom built retro audio board:</p>
+                <div class="grid grid-cols-3 gap-2 mt-1">
+                    <button onclick="playBeep(261.63, 'triangle', 0.15)" class="bg-white hover:bg-pink-100 active:scale-95 text-pink-600 text-[11px] font-bold py-1.5 px-2 rounded-lg border border-pink-200 transition">
+                        🍩 Crunch
+                    </button>
+                    <button onclick="playBeep(440, 'sine', 0.2)" class="bg-white hover:bg-pink-100 active:scale-95 text-pink-600 text-[11px] font-bold py-1.5 px-2 rounded-lg border border-pink-200 transition">
+                        ✨ Yap Ding
+                    </button>
+                    <button onclick="playSaberSound()" class="bg-white hover:bg-blue-100 active:scale-95 text-blue-600 text-[11px] font-bold py-1.5 px-2 rounded-lg border border-blue-200 transition">
+                        ⚔️ Swoosh
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- RIGHT PANEL: Straightforward Interactive Multiple Choice Questions -->
+        <section class="lg:col-span-7 w-full flex flex-col gap-4">
+            
+            <div class="text-xs font-bold uppercase tracking-wider text-blue-800/80 px-2 flex items-center justify-between">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-clipboard-question"></i> Lore Verification Questions</span>
+                <span id="questionProgress" class="font-extrabold text-pink-600 bg-white/70 px-2.5 py-0.5 rounded-full">Progress: 1/16</span>
+            </div>
+
+            <div class="glass-panel rounded-3xl p-6 shadow-xl relative min-h-[460px] flex flex-col justify-between overflow-hidden">
+                
+                <!-- Inner Decorative Background -->
+                <div class="absolute inset-0 bg-white/10 pointer-events-none z-0"></div>
+
+                <!-- Custom feedback toast system -->
+                <div id="customAlert" class="absolute inset-x-4 top-4 bg-[#111214] text-white p-4 rounded-xl shadow-2xl z-50 transform -translate-y-32 opacity-0 transition-all duration-300 pointer-events-none flex items-start gap-3">
+                    <div id="alertIcon" class="text-2xl mt-0.5">💡</div>
+                    <div>
+                        <h4 id="alertTitle" class="font-bold text-sm">Update</h4>
+                        <p id="alertMsg" class="text-xs text-gray-300 mt-1"></p>
+                    </div>
+                </div>
+
+                <!-- Dynamic Multiple Choice Question Area -->
+                <div id="gamePlayArea" class="relative z-10 flex flex-col flex-grow">
+                    
+                    <!-- Beautiful, Smooth Animated Progress Bar -->
+                    <div class="w-full bg-white/45 h-2 rounded-full mb-6 overflow-hidden">
+                        <div id="progressBar" class="progress-bar-fill bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 h-full w-[6.25%] rounded-full"></div>
+                    </div>
+
+                    <!-- Question Segment -->
+                    <div id="questionContainer" class="flex-grow flex flex-col justify-center">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span id="questionCategory" class="text-[10px] uppercase font-black bg-pink-100 text-pink-600 px-2.5 py-0.5 rounded-full tracking-wider">Slang Physics</span>
+                        </div>
+                        <h3 id="questionText" class="text-xl md:text-2xl font-black text-gray-800 tracking-tight leading-snug fun-font mb-6">
+                            Analyzing local attributes...
+                        </h3>
+
+                        <!-- Answer Choices Grid -->
+                        <div id="choicesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Realtime Diagnostic Stats Bar -->
+                    <div class="border-t border-black/5 pt-4 flex items-center justify-between text-xs text-gray-600 font-semibold">
+                        <div class="flex items-center gap-1">
+                            <span>🧁 Brownies:</span>
+                            <span id="statBrownies" class="font-bold text-pink-600">0</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <span>🗣️ Yap Rate:</span>
+                            <span id="statYap" class="font-bold text-blue-600">0%</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <span>🎀 Femboy Compatibility:</span>
+                            <span id="statFemboy" class="font-bold text-purple-600">Normal</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Verification Metrics Screen (Displays upon completion of all 16 questions) -->
+                <div id="gameResultArea" class="hidden relative z-10 flex-col items-center justify-center text-center py-6 flex-grow">
+                    <div class="w-20 h-20 mb-4 relative">
+                        <!-- Award Badge SVG -->
+                        <svg class="w-full h-full text-yellow-400 drop-shadow-sm animate-pulse" viewBox="0 0 100 100" fill="currentColor">
+                            <polygon points="50,15 62,38 88,38 67,54 75,80 50,64 25,80 33,54 12,38 38,38" />
+                            <circle cx="50" cy="48" r="14" fill="#ff69b4" />
+                            <text x="50" y="53" font-family="'Fredoka'" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">👑</text>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-3xl font-black fun-font text-pink-700 tracking-wide mb-2">Verification Complete</h3>
+                    <p class="text-sm text-gray-700 max-w-md mx-auto mb-6" id="resultSubtitle">
+                        Calculated final indices based on your understanding of Brielle's server demographics and behavioral patterns.
+                    </p>
+
+                    <!-- Score Cards -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 w-full max-w-lg mb-6">
+                        <div class="bg-white/60 p-3 rounded-2xl border border-white/40 shadow-sm">
+                            <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Aura Metric</div>
+                            <div class="text-lg font-black text-pink-600 mt-0.5" id="finalAura">1000</div>
+                        </div>
+                        <div class="bg-white/60 p-3 rounded-2xl border border-white/40 shadow-sm">
+                            <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Yap Density</div>
+                            <div class="text-lg font-black text-blue-600 mt-0.5" id="finalYap">0%</div>
+                        </div>
+                        <div class="bg-white/60 p-3 rounded-2xl border border-white/40 shadow-sm">
+                            <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Femboy Metric</div>
+                            <div class="text-lg font-black text-purple-600 mt-0.5" id="finalFemboy">0%</div>
+                        </div>
+                        <div class="bg-white/60 p-3 rounded-2xl border border-white/40 shadow-sm">
+                            <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Brownie Index</div>
+                            <div class="text-lg font-black text-green-600 mt-0.5" id="finalBrownies">0</div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Assigned Server Persona Card -->
+                    <div class="bg-[#111214] text-white p-4 rounded-2xl border border-white/10 shadow-lg max-w-sm w-full mb-6">
+                        <div class="text-[10px] text-pink-400 font-extrabold uppercase tracking-widest">ASSIGNED USER CLASS</div>
+                        <div class="text-xl font-extrabold text-white mt-1 fun-font" id="finalRankName">Analyst Grade 1</div>
+                        <p class="text-[11px] text-gray-400 mt-2" id="finalRankDesc">
+                            You successfully analyzed Brielle's core characteristics. The Beat Saber Assessment Team (BAT) registry has been updated.
+                        </p>
+                    </div>
+
+                    <!-- Reset button -->
+                    <button onclick="restartQuiz()" class="bg-gradient-to-r from-pink-500 to-blue-500 text-white font-black fun-font px-8 py-3 rounded-2xl shadow-md hover:from-pink-600 hover:to-blue-600 active:scale-95 transition-all">
+                        🔄 Refresh Questions
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER: Credits & References -->
+    <footer class="w-full max-w-5xl z-10 text-center py-4 border-t border-white/20 text-xs text-pink-700/80 font-medium flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div>
+            Mock elements structured from <span class="bg-pink-100/60 px-1.5 py-0.5 rounded font-mono">Screenshot 2026-05-28 091107.jpg</span> and <span class="bg-pink-100/60 px-1.5 py-0.5 rounded font-mono">Screenshot 2026-05-28 090601.png</span>
+        </div>
+        <div class="flex items-center gap-3">
+            <span>Designed with ✨ Sparkles & 🍩 Donut Energy</span>
+            <span>|</span>
+            <button onclick="triggerEasterEgg('donut')" class="underline hover:text-blue-700 cursor-pointer">Donut Cache</button>
+        </div>
+    </footer>
+
+    <script>
+        // WEB AUDIO SYSTEM FOR RETRO CHIP SOUNDS
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playBeep(freq, type = 'sine', duration = 0.1) {
+            try {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                
+                osc.type = type;
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                
+                gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+                // Clean release curve
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+                
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch (e) {
+                console.log("Audio not supported or interaction deferred");
+            }
+        }
+
+        // Custom Beat Saber blade simulation audio
+        function playSaberSound() {
+            try {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(140, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(550, audioCtx.currentTime + 0.22);
+                
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.25);
+                
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.3);
+            } catch (e) {}
+        }
+
+        function playChime() {
+            const notes = [523.25, 659.25, 783.99, 1046.50]; // C Major Chord
+            notes.forEach((freq, idx) => {
+                setTimeout(() => {
+                    playBeep(freq, 'sine', 0.22);
+                }, idx * 90);
+            });
+        }
+
+        function playBuzzer() {
+            try {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(115, audioCtx.currentTime);
+                osc.frequency.setValueAtTime(105, audioCtx.currentTime + 0.1);
+                
+                gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.35);
+            } catch (e) {}
+        }
+
+        const questionsList = [
+            {
+                category: "Identity Profile",
+                question: "Question 1: Is Brielle gay or straight?",
+                choices: [
+                    { text: "Straight", aura: -50, brownie: 1, yap: 10, femboy: 10, feedback: "Rather simple! Let's examine alternative options." },
+                    { text: "Gay/Lesbian", aura: 100, brownie: 3, yap: 30, femboy: 20, feedback: "Unmatched pink aesthetic aura identified!" },
+                    { text: "Bi & Slay", aura: 150, brownie: 5, yap: 40, femboy: 80, feedback: "Maximum rizz selected. Excellent status alignment!" },
+                    { text: "Pure Chaos & Cookie Enthusiast", aura: 200, brownie: 10, yap: 50, femboy: 50, feedback: "Highly accurate! Chaos rules the Brielle spectrum." }
+                ],
+                correctIndex: 2
+            },
+            {
+                category: "Yapping Diagnostics",
+                question: "Question 2: Does Brielle talk a lot?",
+                choices: [
+                    { text: "Absolute yapper (yaps 24/7/365)", aura: 250, brownie: 5, yap: 100, femboy: 10, feedback: "Data verified. She literally cannot be muted!" },
+                    { text: "Silent sigma (mewing champion)", aura: -100, brownie: 0, yap: -50, femboy: 0, feedback: "False. Mewing streak broken in milliseconds!" },
+                    { text: "Only talks when brownies are mentioned", aura: 150, brownie: 8, yap: 40, femboy: 20, feedback: "It certainly activates her, but she still yaps normally." },
+                    { text: "Communicates in Beat Saber pattern sounds", aura: 100, brownie: 2, yap: 30, femboy: 10, feedback: "A dominant dialect in the local sub-channels!" }
+                ],
+                correctIndex: 0
+            },
+            {
+                category: "Femboy Dynamics",
+                question: "Question 3: Does Brielle like femboys?",
+                choices: [
+                    { text: "Yes (Fully certified Femboy Enthusiast)", aura: 300, brownie: 6, yap: 50, femboy: 100, feedback: "High compatibility! Femboys receive full admin clearance." },
+                    { text: "No (Certified hater)", aura: -200, brownie: 0, yap: -10, femboy: -50, feedback: "Incorrect. Rejection codes detected." },
+                    { text: "Only if they bake fresh fudge brownies", aura: 200, brownie: 15, yap: 40, femboy: 80, feedback: "An acceptable compromise under the local tax code." },
+                    { text: "She is secretely 3 femboys in a trenchcoat", aura: 150, brownie: 4, yap: 60, femboy: 90, feedback: "The conspiracy gains traction!" }
+                ],
+                correctIndex: 0
+            },
+            {
+                category: "Aura Math",
+                question: "Question 4: How much aura does Brielle lose when her brownies get Fanum Taxed?",
+                choices: [
+                    { text: "-10,000 aura (Immediate collapse)", aura: 200, brownie: -5, yap: 20, femboy: 10, feedback: "Devastating loss! The server goes on complete lockdown." },
+                    { text: "+50 aura (Respects the tax)", aura: -100, brownie: -2, yap: 10, femboy: 0, feedback: "No one respects arbitrary brownie subtraction." },
+                    { text: "0 aura (She has emergency backups)", aura: 150, brownie: 20, yap: 30, femboy: 20, feedback: "True preparation. Safe reserves deployed." },
+                    { text: "She taxes them back using BAT administrative power", aura: 250, brownie: 5, yap: 50, femboy: 40, feedback: "Yes! High-level recovery operation." }
+                ],
+                correctIndex: 0
+            },
+            {
+                category: "Custom Status Review",
+                question: "Question 5: Is Brielle's status 'brownies' a certified Ohio moment?",
+                choices: [
+                    { text: "Yes, completely skibidi", aura: -50, brownie: 1, yap: 20, femboy: 10, feedback: "Too outdated! Seek higher quality parameters." },
+                    { text: "No, it is pure, elite aesthetic rizz", aura: 150, brownie: 5, yap: 40, femboy: 30, feedback: "Correct. The lowercase simplicity holds power." },
+                    { text: "It is simply highly cozy", aura: 200, brownie: 8, yap: 10, femboy: 50, feedback: "An excellent interpretation of the 'brownies' vibe." },
+                    { text: "It is an administrative Beat Saber code", aura: 100, brownie: 3, yap: 15, femboy: 5, feedback: "Fascinating theory, but likely just snacks!" }
+                ],
+                correctIndex: 2
+            },
+            {
+                category: "Rizzology",
+                question: "Question 6: What is Brielle's primary source of rizz?",
+                choices: [
+                    { text: "Her administrative BAT badge", aura: 180, brownie: 4, yap: 25, femboy: 30, feedback: "An incredibly powerful credential." },
+                    { text: "The cute white chihuahua with bunny ears profile", aura: 250, brownie: 6, yap: 30, femboy: 80, feedback: "Unmatched visual design. Outstanding aesthetic." },
+                    { text: "High-velocity textual yapping in chat", aura: 150, brownie: 2, yap: 100, femboy: 40, feedback: "Captivating users through sheer data output!" },
+                    { text: "Her unlimited brownie recipes", aura: 200, brownie: 20, yap: 15, femboy: 20, feedback: "The quickest way to administrative compliance." }
+                ],
+                correctIndex: 1
+            },
+            {
+                category: "Concentration",
+                question: "Question 7: How long can Brielle maintain silence before yapping?",
+                choices: [
+                    { text: "Exactly 0.4 seconds", aura: 220, brownie: 1, yap: 99, femboy: 20, feedback: "A record performance! Vocalizing is essential." },
+                    { text: "3 business days", aura: -150, brownie: 0, yap: -30, femboy: 0, feedback: "Physically impossible under yapper specifications." },
+                    { text: "Only while active eating brownies", aura: 180, brownie: 10, yap: 15, femboy: 10, feedback: "A brief pause to process carbohydrate resources." },
+                    { text: "When playing expert+ maps in Beat Saber", aura: 150, brownie: 3, yap: 40, femboy: 30, feedback: "Fast block patterns demand total focus." }
+                ],
+                correctIndex: 0
+            },
+            {
+                category: "Metaverse Realities",
+                question: "Question 8: If Brielle was a Roblox game, which one would she be?",
+                choices: [
+                    { text: "Dress to Impress (Slaying the runway)", aura: 250, brownie: 8, yap: 60, femboy: 95, feedback: "Aesthetic match! 5-star fashion compliance." },
+                    { text: "Blox Fruits (Endless level grinding)", aura: -50, brownie: 1, yap: 10, femboy: 10, feedback: "Too intense for her cozy baking profile." },
+                    { text: "Adopt Me! Chihuahua Simulator", aura: 180, brownie: 5, yap: 40, femboy: 50, feedback: "Perfectly mirrors her bunny-eared dog profile." },
+                    { text: "Obby but you are a baked brownie", aura: 150, brownie: 12, yap: 20, femboy: 15, feedback: "A beautiful, sugary, yet challenging journey." }
+                ],
+                correctIndex: 0
+            },
+            {
+                category: "Tax Audits",
+                question: "Question 9: Who gets Fanum Taxed by Brielle the most?",
+                choices: [
+                    { text: "The server's collective brownie reserves", aura: 200, brownie: 25, yap: 30, femboy: 20, feedback: "All pastries must be declared at the border." },
+                    { text: "Unsuspecting femboys in her chat list", aura: 220, brownie: 8, yap: 50, femboy: 100, feedback: "They must yield assets to the BAT moderator!" },
+                    { text: "The Beat Saber mapping developers", aura: 120, brownie: 4, yap: 20, femboy: 10, feedback: "Taxing parameters to optimize community comfort." },
+                    { text: "She never taxes, she is a generous queen", aura: -100, brownie: 0, yap: -15, femboy: 0, feedback: "Incorrect. Sweets will be administrative confiscated." }
+                ],
+                correctIndex: 1
+            },
+            {
+                category: "Brainrot Shield",
+                question: "Question 10: What is Brielle's relationship with Skibidi Toilet lore?",
+                choices: [
+                    { text: "She created the central character elements", aura: -100, brownie: 0, yap: 10, femboy: -10, feedback: "Incorrect. Far too mechanical and grey!" },
+                    { text: "She blocklists users who mention it (Anti-brainrot)", aura: 250, brownie: 10, yap: 15, femboy: 50, feedback: "High IQ. Preserves clean aura values." },
+                    { text: "She sings the theme with custom brownie lyrics", aura: 180, brownie: 15, yap: 70, femboy: 30, feedback: "'Skibidi bop bop brownie yes yes...'" },
+                    { text: "She only views it via Beat Saber custom maps", aura: 120, brownie: 2, yap: 40, femboy: 10, feedback: "A terrifying chart, but theoretically possible." }
+                ],
+                correctIndex: 1
+            },
+            {
+                category: "Combat Diagnostics",
+                question: "Question 11: What happens if you challenge Brielle in a Beat Saber match?",
+                choices: [
+                    { text: "You get sliced like a warm brownie", aura: 250, brownie: 12, yap: 30, femboy: 40, feedback: "Immediate defeat. She owns local score registries." },
+                    { text: "She yaps so fast you lose rhythm", aura: 220, brownie: 5, yap: 100, femboy: 60, feedback: "Highly effective sound-channel distraction strategy." },
+                    { text: "She drops sabers to process a brownie", aura: 180, brownie: 20, yap: 10, femboy: 20, feedback: "Tactical pause! Nutritional intake prioritized." },
+                    { text: "She yields out of pure chihuahua kindness", aura: 100, brownie: 3, yap: 25, femboy: 50, feedback: "Unlikely on high difficulty layouts!" }
+                ],
+                correctIndex: 0
+            },
+            {
+                category: "Slang Mathematics",
+                question: "Question 12: On a scale of 1 to Baby Gronk, how much rizz does Brielle possess?",
+                choices: [
+                    { text: "Negative rizz (Severe Ohio contamination)", aura: -250, brownie: 0, yap: -20, femboy: -50, feedback: "Invalid. Outcast status pending." },
+                    { text: "Livvy Dunne level (Highly popular)", aura: 180, brownie: 4, yap: 40, femboy: 70, feedback: "Strong rating. Certified community influence." },
+                    { text: "Drip King status (Visual maximum)", aura: 200, brownie: 8, yap: 30, femboy: 80, feedback: "Premium styling. The bunny ears are functional accessories." },
+                    { text: "Beyond human limits (The Brownie-maxxing Queen)", aura: 280, brownie: 25, yap: 60, femboy: 90, feedback: "Correct! Rizz indices off the charts." }
+                ],
+                correctIndex: 3
+            },
+            {
+                category: "Styling Standards",
+                question: "Question 13: How does Brielle contribute to server Looksmaxxing?",
+                choices: [
+                    { text: "By placing pink rabbit ears on a chihuahua PFP", aura: 260, brownie: 5, yap: 20, femboy: 80, feedback: "Absolute maximum visual performance." },
+                    { text: "Suggesting chocolate frosting as face cream", aura: 150, brownie: 18, yap: 40, femboy: 30, feedback: "A highly sticky cosmetic recommendation." },
+                    { text: "Instructing mods to maintain constant mewing", aura: 200, brownie: 4, yap: 50, femboy: 60, feedback: "Keeps chat quiet while she conducts yapping operations." },
+                    { text: "Declaring cookies as the only true cosmetic", aura: 120, brownie: 12, yap: 10, femboy: 15, feedback: "A sweet philosophical approach." }
+                ],
+                correctIndex: 0
+            },
+            {
+                category: "Meme Evaluation",
+                question: "Question 14: What is Brielle's stance on the Grimace Shake?",
+                choices: [
+                    { text: "Enjoys it (Matches the pastel lavender profile)", aura: 180, brownie: 8, yap: 30, femboy: 40, feedback: "Consistent aesthetic alignment." },
+                    { text: "Deems it a completely dead meme", aura: 250, brownie: 3, yap: 10, femboy: 20, feedback: "Correct. High-aura reaction to outdated trends." },
+                    { text: "Prefers the custom Chocolate Brownie variant", aura: 200, brownie: 20, yap: 25, femboy: 30, feedback: "A specialized recipe with maximum flavor rating." },
+                    { text: "Conducts textual screaming when referenced", aura: 150, brownie: 2, yap: 80, femboy: 50, feedback: "Standard vocal channel feedback pattern." }
+                ],
+                correctIndex: 1
+            },
+            {
+                category: "Channel Exits",
+                question: "Question 15: How does Brielle typically exit the Discord chat?",
+                choices: [
+                    { text: "'Skibidi out, rizzlers!'", aura: -50, brownie: 1, yap: 20, femboy: 10, feedback: "Slang out of date. Disapproved." },
+                    { text: "She doesn't (Yaps in voice chat while sleeping)", aura: 260, brownie: 6, yap: 100, femboy: 50, feedback: "True! The microphone hardware remains active." },
+                    { text: "Sparsely posts a brownie emoji and vanishes", aura: 200, brownie: 15, yap: 10, femboy: 30, feedback: "Clean, mysterious, high-aura retreat." },
+                    { text: "Sends a chihuahua GIF and plays Beat Saber", aura: 220, brownie: 5, yap: 40, femboy: 70, feedback: "The perpetual loop of her online existence!" }
+                ],
+                correctIndex: 1
+            },
+            {
+                category: "Superpowers",
+                question: "Question 16: What is Brielle's specialty power in a digital universe?",
+                choices: [
+                    { text: "Infinite chocolate brownie conjuring magic", aura: 250, brownie: 30, yap: 30, femboy: 50, feedback: "The absolute pinnacle of cheat codes!" },
+                    { text: "Yapping at frequencies that disable opponent actions", aura: 270, brownie: 5, yap: 100, femboy: 60, feedback: "Soundwave barrier defense! Ultimate yapping wizardry." },
+                    { text: "Summoning a battalion of ribbon-wearing chihuahuas", aura: 240, brownie: 8, yap: 40, femboy: 80, feedback: "A highly adorable, stampeding visual asset." },
+                    { text: "Mastery of synchronized dual blade patterns", aura: 200, brownie: 4, yap: 50, fill: 40, feedback: "Legendary reflexes verified by high scores." }
+                ],
+                correctIndex: 1
+            }
+        ];
+
+        let currentQuestionIdx = 0;
+        let userAura = 1000;
+        let cumulativeBrownies = 0;
+        let cumulativeYap = 0;
+        let cumulativeFemboy = 0;
+
+        function initQuestions() {
+            currentQuestionIdx = 0;
+            userAura = 1000;
+            cumulativeBrownies = 0;
+            cumulativeYap = 0;
+            cumulativeFemboy = 0;
+            
+            document.getElementById("gamePlayArea").classList.remove("hidden");
+            document.getElementById("gameResultArea").classList.add("hidden");
+            document.getElementById("gameResultArea").classList.remove("flex");
+            
+            updateStatsUI();
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            if (currentQuestionIdx >= questionsList.length) {
+                endQuiz();
+                return;
+            }
+
+            const q = questionsList[currentQuestionIdx];
+            
+            // Render text elements without gamey titles
+            document.getElementById("questionCategory").innerText = q.category;
+            document.getElementById("questionProgress").innerText = `Progress: ${currentQuestionIdx + 1}/${questionsList.length}`;
+            document.getElementById("questionText").innerText = q.question;
+            
+            // Compute animated progress bar with smooth transitions
+            const percentage = ((currentQuestionIdx + 1) / questionsList.length) * 100;
+            document.getElementById("progressBar").style.width = `${percentage}%`;
+
+            // Reset and build multiple choice buttons
+            const choicesGrid = document.getElementById("choicesGrid");
+            choicesGrid.innerHTML = "";
+
+            q.choices.forEach((choice, index) => {
+                const btn = document.createElement("button");
+                btn.className = "w-full text-left bg-white/70 hover:bg-pink-100/90 active:scale-[0.98] p-4 rounded-2xl border border-white/60 shadow-sm transition-all duration-200 text-sm font-semibold text-gray-800 flex items-start gap-3 hover:border-pink-300 group";
+                
+                // Option indicator
+                const marker = document.createElement("span");
+                marker.className = "flex items-center justify-center w-6 h-6 rounded-lg bg-pink-100 text-pink-600 font-bold text-xs group-hover:bg-pink-200 transition-colors shrink-0";
+                marker.innerText = String.fromCharCode(65 + index); // A, B, C, D
+                
+                const txt = document.createElement("span");
+                txt.innerText = choice.text;
+                txt.className = "pt-0.5";
+
+                btn.appendChild(marker);
+                btn.appendChild(txt);
+                
+                btn.onclick = () => selectChoice(index);
+                choicesGrid.appendChild(btn);
+            });
+        }
+
+        function selectChoice(choiceIdx) {
+            const q = questionsList[currentQuestionIdx];
+            const choice = q.choices[choiceIdx];
+            const isCorrect = choiceIdx === q.correctIndex;
+
+            // Recalculating diagnostics
+            userAura += choice.aura;
+            cumulativeBrownies += choice.brownie;
+            cumulativeYap += choice.yap;
+            cumulativeFemboy += choice.femboy;
+
+            if (userAura < 0) userAura = 0;
+            if (cumulativeBrownies < 0) cumulativeBrownies = 0;
+
+            // Audio cues depending on the outcome
+            if (isCorrect) {
+                playBeep(659.25, 'sine', 0.15); // E note
+                setTimeout(() => playBeep(880, 'sine', 0.2), 80); // A note
+                showToast("Splendid Analysis!", `+${choice.aura} Aura! ${choice.feedback}`, "bg-emerald-900 border-emerald-500", "🌈");
+            } else {
+                playBuzzer();
+                showToast("Aura Subtracted!", `${choice.aura} Aura! ${choice.feedback}`, "bg-rose-950 border-rose-600", "🚨");
+            }
+
+            // Update Discord Status dynamically to reflect choices
+            if (choice.brownie > 10) {
+                document.getElementById("profileStatus").innerText = "brownies (active eating)";
+            } else if (choice.yap > 80) {
+                document.getElementById("profileStatus").innerText = "yapping indefinitely";
+            } else {
+                document.getElementById("profileStatus").innerText = "brownies";
+            }
+
+            updateStatsUI();
+
+            currentQuestionIdx++;
+            setTimeout(() => {
+                loadQuestion();
+            }, 800);
+        }
+
+        function updateStatsUI() {
+            document.getElementById("auraScore").innerText = userAura;
+            document.getElementById("statBrownies").innerText = cumulativeBrownies;
+            
+            const count = currentQuestionIdx + 1;
+            const yapPercentage = Math.min(100, Math.round(cumulativeYap / count));
+            document.getElementById("statYap").innerText = `${yapPercentage}%`;
+
+            let femboyLabel = "Normal";
+            if (cumulativeFemboy > 500) femboyLabel = "Ally 🎀";
+            else if (cumulativeFemboy > 250) femboyLabel = "Enthusiast ✨";
+            else if (cumulativeFemboy < 50) femboyLabel = "Anti-yap 🤫";
+            document.getElementById("statFemboy").innerText = femboyLabel;
+        }
+
+        // Custom notification toaster (strictly avoids window.alert)
+        let toastTimeout;
+        function showToast(title, msg, bgClass, emoji = "📢") {
+            const alertBox = document.getElementById("customAlert");
+            const alertIcon = document.getElementById("alertIcon");
+            const alertTitle = document.getElementById("alertTitle");
+            const alertMsg = document.getElementById("alertMsg");
+
+            clearTimeout(toastTimeout);
+
+            alertBox.className = `absolute inset-x-4 top-4 text-white p-4 rounded-xl shadow-2xl z-50 transform transition-all duration-300 flex items-start gap-3 border ${bgClass}`;
+            alertIcon.innerText = emoji;
+            alertTitle.innerText = title;
+            alertMsg.innerText = msg;
+
+            alertBox.style.transform = "translateY(0)";
+            alertBox.style.opacity = "1";
+
+            toastTimeout = setTimeout(() => {
+                alertBox.style.transform = "translateY(-120px)";
+                alertBox.style.opacity = "0";
+            }, 3000);
+        }
+
+        function endQuiz() {
+            playChime();
+            document.getElementById("gamePlayArea").classList.add("hidden");
+            document.getElementById("gameResultArea").classList.remove("hidden");
+            document.getElementById("gameResultArea").classList.add("flex");
+
+            // Load values
+            document.getElementById("finalAura").innerText = userAura;
+            const count = questionsList.length;
+            const finalYapVal = Math.min(100, Math.round(cumulativeYap / count));
+            document.getElementById("finalYap").innerText = `${finalYapVal}%`;
+            
+            const finalFemVal = Math.min(100, Math.round(cumulativeFemboy / count));
+            document.getElementById("finalFemboy").innerText = `${finalFemVal}%`;
+            document.getElementById("finalBrownies").innerText = cumulativeBrownies;
+
+            // Generate user status text
+            let rankName = "Vocal Observer";
+            let rankDesc = "You survived Brielle's communication space. You kept relatively quiet... are you practicing looksmaxxing offline?";
+
+            if (userAura > 2500) {
+                rankName = "👑 Giga Femboy & Pastry Duke";
+                rankDesc = "You possess outstanding lore comprehension! You sliced through the interactive items like an administrative Beat Saber moderator.";
+            } else if (userAura > 1500) {
+                rankName = "✨ Premium Scholar";
+                rankDesc = "You understand community dynamics, respect the BAT badge, and understand the value of brownies. Excellent performance.";
+            } else if (cumulativeBrownies > 120) {
+                rankName = "🍩 Pastry Quality Inspector";
+                rankDesc = "Your results show an extreme focus on sugary snacks. You probably joined her space purely for free brownie distributions.";
+            } else if (finalYapVal > 80) {
+                rankName = "🗣️ Voice Channel Echo";
+                rankDesc = "You selected options leading to elevated yapping indices. Your mic hardware is working overtime. Excellent vocal presence.";
+            }
+
+            document.getElementById("finalRankName").innerText = rankName;
+            document.getElementById("finalRankDesc").innerText = rankDesc;
+        }
+
+        function restartQuiz() {
+            playBeep(330, 'sine', 0.15);
+            initQuestions();
+        }
+
+        // Interactive profile badges easter egg
+        function triggerEasterEgg(type) {
+            playBeep(523.25, 'triangle', 0.1);
+            if (type === 'badge') {
+                showToast("BAT Badge Activated!", "You inspected her Beat Saber Assessment Team badge! Gained +200 Aura for active auditing.", "bg-purple-900 border-purple-500", "⚔️");
+                userAura += 200;
+                updateStatsUI();
+            } else if (type === 'donut') {
+                showToast("Confectionery Found!", "Synthesized virtual brownies! +50 Brownie index added.", "bg-pink-900 border-pink-400", "🍩");
+                cumulativeBrownies += 50;
+                updateStatsUI();
+                playChime();
+            }
+        }
+
+        // Save customized note inside user's profile
+        document.getElementById("discordNote").addEventListener("input", (e) => {
+            localStorage.setItem("brielle_note_interactive", e.target.value);
+        });
+
+        window.onload = function() {
+            // Restore persistent notes
+            const savedNote = localStorage.getItem("brielle_note_interactive");
+            if (savedNote) {
+                document.getElementById("discordNote").value = savedNote;
+            }
+            initQuestions();
+        };
+    </script>
+</body>
+</html>
