@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esli Mendez - Official Fan Hub</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Customization & Animations config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            cursive: ['Comfortaa', 'cursive'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Dynamic Keyframes for Background, Banner and Rainbow elements -->
+  <style>
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .animated-grad-bg-light {
+      background: linear-gradient(135deg, #fff5f6, #ffebee, #fce4ec, #f3e5f5, #ffffff, #ffebee);
+      background-size: 400% 400%;
+      animation: gradientFlow 16s ease infinite;
+    }
+
+    .animated-grad-bg-dark {
+      background: linear-gradient(135deg, #250314, #3d0521, #510a2f, #1b020e, #2d041a, #3d0521);
+      background-size: 400% 400%;
+      animation: gradientFlow 16s ease infinite;
+    }
+    
+    @keyframes morphPolkaOne {
+      0% {
+        border-radius: 50% 40% 60% 40% / 40% 50% 40% 60%;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 0.8;
+      }
+      33% {
+        border-radius: 70% 30% 50% 50% / 50% 30% 70% 50%;
+        transform: translate(80px, -60px) scale(1.15) rotate(120deg);
+        opacity: 0.95;
+      }
+      66% {
+        border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
+        transform: translate(-100px, 110px) scale(0.9) rotate(240deg);
+        opacity: 0.75;
+      }
+      100% {
+        border-radius: 50% 40% 60% 40% / 40% 50% 40% 60%;
+        transform: translate(0, 0) scale(1) rotate(360deg);
+        opacity: 0.8;
+      }
+    }
+
+    @keyframes morphPolkaTwo {
+      0% {
+        border-radius: 35% 65% 45% 55% / 55% 45% 55% 45%;
+        transform: translate(0, 0) scale(1.1) rotate(360deg);
+        opacity: 0.75;
+      }
+      50% {
+        border-radius: 60% 40% 70% 30% / 40% 60% 30% 70%;
+        transform: translate(-110px, -80px) scale(0.85) rotate(180deg);
+        opacity: 0.9;
+      }
+      100% {
+        border-radius: 35% 65% 45% 55% / 55% 45% 55% 45%;
+        transform: translate(0, 0) scale(1.1) rotate(0deg);
+        opacity: 0.75;
+      }
+    }
+
+    @keyframes morphPolkaThree {
+      0% {
+        border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%;
+        transform: translate(0, 0) scale(0.9) rotate(0deg);
+        opacity: 0.7;
+      }
+      50% {
+        border-radius: 30% 70% 70% 30% / 70% 30% 70% 30%;
+        transform: translate(120px, 120px) scale(1.2) rotate(180deg);
+        opacity: 0.95;
+      }
+      100% {
+        border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%;
+        transform: translate(0, 0) scale(0.9) rotate(360deg);
+        opacity: 0.7;
+      }
+    }
+
+    .polka-circle-1-light {
+      animation: morphPolkaOne 22s ease-in-out infinite;
+      background: radial-gradient(circle, #f472b6, #ec4899, rgba(219, 39, 119, 0.4));
+      filter: blur(15px);
+    }
+    .polka-circle-1-dark {
+      animation: morphPolkaOne 22s ease-in-out infinite;
+      background: radial-gradient(circle, #ec4899, #db2777, rgba(251, 113, 133, 0.2));
+      filter: blur(25px);
+    }
+
+    .polka-circle-2-light {
+      animation: morphPolkaTwo 28s ease-in-out infinite;
+      background: radial-gradient(circle, #f43f5e, #d946ef, rgba(168, 85, 247, 0.35));
+      filter: blur(20px);
+    }
+    .polka-circle-2-dark {
+      animation: morphPolkaTwo 28s ease-in-out infinite;
+      background: radial-gradient(circle, #db2777, #701a75, rgba(14, 116, 144, 0.25));
+      filter: blur(30px);
+    }
+
+    .polka-circle-3-light {
+      animation: morphPolkaThree 25s ease-in-out infinite;
+      background: radial-gradient(circle, #ec4899, #f472b6, rgba(251, 113, 133, 0.3));
+      filter: blur(25px);
+    }
+    .polka-circle-3-dark {
+      animation: morphPolkaThree 25s ease-in-out infinite;
+      background: radial-gradient(circle, #9d174d, #f43f5e, rgba(244, 63, 94, 0.15));
+      filter: blur(35px);
+    }
+
+    .polka-dot-pattern-light {
+      background-image: radial-gradient(#fbcfe8 15%, transparent 16%);
+      background-size: 24px 24px;
+      opacity: 0.25;
+    }
+    .polka-dot-pattern-dark {
+      background-image: radial-gradient(#f472b6 10%, transparent 11%);
+      background-size: 24px 24px;
+      opacity: 0.12;
+    }
+
+    .text-neon-glow {
+      text-shadow: 0 0 15px rgba(236, 72, 153, 0.35), 0 0 3px rgba(236, 72, 153, 0.15);
+    }
+
+    @keyframes driftUp {
+      0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-130px) scale(1.4) rotate(25deg);
+        opacity: 0;
+      }
+    }
+
+    .spawned-particle {
+      animation: driftUp 1.2s forwards cubic-bezier(0.25, 1, 0.5, 1);
+      pointer-events: none;
+    }
+
+    @keyframes pulseBannerGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .shifting-banner-grad {
+      background: linear-gradient(270deg, #ec4899, #f43f5e, #d946ef, #a855f7, #ec4899);
+      background-size: 600% 600%;
+      animation: pulseBannerGradient 14s ease infinite;
+    }
+
+    .tiktok-gradient-btn {
+      background: linear-gradient(135deg, #00f2fe, #4facfe, #f43f5e, #ec4899);
+      background-size: 300% 300%;
+      animation: gradientFlow 8s ease infinite;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+    @keyframes rainbowShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .rainbow-gradient-bar {
+      background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+      background-size: 300% 300%;
+      animation: rainbowShift 6s linear infinite;
+    }
+  </style>
+  
+  <!-- Script definition of state registered first to ensure Alpine can find it on load -->
+  <script>
+    function fanSite() {
+      return {
+        activeTab: 'home',
+        likesCount: 6821340,
+        hasLiked: false,
+        lightboxIndex: null,
+        isDarkMode: false,
+        scrollY: 0,
+        toast: { visible: false, message: '', type: 'success' },
+        particles: [],
+        grwmHair: 'Pretty Curls',
+        grwmAccessory: 'Hello Kitty Clips',
+        grwmOutfit: 'Off-The-Shoulder Blue',
+        grwmScore: null,
+        newName: '',
+        newMessage: '',
+        selectedAvatar: '🌸',
+        currentQuestion: 0,
+        selectedOption: null,
+        score: 0,
+        showExplanation: false,
+        quizFinished: false,
+
+        tabs: [
+          { id: 'home', label: 'Home Feed', icon: '🏠' },
+          { id: 'photos', label: 'Photo Gallery', icon: '📸' },
+          { id: 'grwm', label: 'GRWM Dress-Up', icon: '🎀' },
+          { id: 'fanboard', label: 'Fan Message Board', icon: '💌' },
+          { id: 'quiz', label: 'Trivia Quiz', icon: '🏆' },
+          { id: 'quotes', label: 'Dialogue Board', icon: '🎙️' }
+        ],
+
+        avatars: ['🌸', '✨', '👑', '💖', '🦄', '🎀', '🎧'],
+
+        images: [
+          {
+            url: "https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/601814530_18059982197642767_4801963973831483693_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ig_cache_key=Mzc5MzA1OTMxODMxMzQzMjE2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTI5MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Ps0_YhiIuOwQ7kNvwF78hNA&_nc_oc=AdoYF612YMoTuuTj8OaWQYp_zX82Txvkx4iveXgF5PSIfU3Tv-wilBeEttaMKIcH0To&_nc_ad=z-m&_nc_cid=1087&_nc_zt=23&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_gid=4GXf4YRwnKLuXumLkjd7rg&_nc_ss=7a22e&oh=00_AQDiUEMEmI2FQguITGR_JNVw6iUVu4veC-dPUieW4UhAtw&oe=6A51C03A",
+            title: "Chic Selfie Glow",
+            desc: "Esli posing with a stunning look, showcasing her natural charm and aesthetic style."
+          },
+          {
+            url: "https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/602415472_18059982188642767_610103657875823400_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ig_cache_key=Mzc5MzA1OTMxODE1NDA0NjY3Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTI5MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=9GiqFf7l1MQQ7kNvwF8Tape&_nc_oc=AdqCwf10Vs_e2Ubn3PBflRYcGMzhASLqcA_2HuIafUdJ5cWes95Bhtx1VCOoRRVeclU&_nc_ad=z-m&_nc_cid=1087&_nc_zt=23&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_gid=4GXf4YRwnKLuXumLkjd7rg&_nc_ss=7a22e&oh=00_AQCXXf9vduSywKDFCCpGrrC3kWWXNeUpGRvZwbGU3FBP3g&oe=6A51C894",
+            title: "Playful Expressions",
+            desc: "An adorable, candid moment capture displaying her bubbly, authentic personality."
+          },
+          {
+            url: "https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/602300083_18059982170642767_7314230729866908905_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ig_cache_key=Mzc5MzA1OTMxODE1NDA2NjA0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTI5MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=gQCPCZigZLUQ7kNvwGFfiuO&_nc_oc=Adqocy7tXVHsmdFDkz2IOEse7JFJ29prbFDWjK7foZeDwEGgdpKacnuwzRcR0tLtbP8&_nc_ad=z-m&_nc_cid=1087&_nc_zt=23&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_gid=4GXf4YRwnKLuXumLkjd7rg&_nc_ss=7a22e&oh=00_AQCkUbANtJ0Zhq1SWrNtEjEikoJqKR3tGeZSBGVbRQsYQg&oe=6A51B057",
+            title: "Vlog Era Sparkle",
+            desc: "Getting ready for a new vlog, highlighting her famous curls and trendy outfit choice."
+          },
+          {
+            url: "https://github.com/Instagram-aayeddie/IMAGES/blob/main/44de4b31-7fcf-4397-9580-14c28bf58287.jpg?raw=true",
+            title: "Curls & Glitz",
+            desc: "Esli showing off her high-volume signature bouncy waves wearing her gorgeous custom 'E' pendant necklace."
+          },
+          {
+            url: "https://github.com/Instagram-aayeddie/IMAGES/blob/main/9296d2ed-a9bd-44a5-929d-d25ebc6483d3.jpg?raw=true",
+            title: "Chic Straight Split",
+            desc: "Getting ready for a sunny Texas outing, featuring sleek long hair styling and an adorable makeup profile."
+          }
+        ],
+
+        fanMessages: [
+          { id: 1, name: "Jessica ❤️", text: "Omg Esli you are my literal role model! I watch all your GRWM vlogs!", time: "2 mins ago", avatar: "🌸" },
+          { id: 2, name: "Mateo_TX", text: "Laredo representing! You are making us proud 🙌", time: "1 hour ago", avatar: "✨" },
+          { id: 3, name: "HelloKittyFan", text: "The 'ill slap the arigato outa them' video is forever iconic 😂", time: "4 hours ago", avatar: "🐱" },
+          { id: 4, name: "Elena.Grwm", text: "Can you please post a hair tutorial soon? Your curls are perfect!", time: "1 day ago", avatar: "💄" }
+        ],
+
+        quizQuestions: [
+          {
+            question: "When is Esli's birthday?",
+            options: ["August 8", "September 12", "June 24", "October 3"],
+            answer: "August 8",
+            fact: "She was born on August 8, 2011, making her a proud Leo!"
+          },
+          {
+            question: "Which of these is the name of her younger brother?",
+            options: ["Laredo", "Temu", "Mateo", "Alex"],
+            answer: "Temu",
+            fact: "She has a younger brother affectionately known as Temu."
+          },
+          {
+            question: "Which viral video gained over 1 million views in March of 2024?",
+            options: ["ill slap the arigato outa them", "who u tryna impress", "GRWM for high school", "Rihanna dance challenge"],
+            answer: "ill slap the arigato outa them",
+            fact: "The viral 'ill slap the arigato outa them' video featured a cute Hello Kitty-themed filter!"
+          },
+          {
+            question: "Where was Esli born?",
+            options: ["Houston, TX", "Laredo, TX", "Los Angeles, CA", "Miami, FL"],
+            answer: "Laredo, TX",
+            fact: "She is a proud Texan born in Laredo!"
+          }
+        ],
+
+        quotes: [
+          {
+            phrase: "I'll slap the arigato out of them!",
+            context: "Her famous March 2024 quote using the cute Hello Kitty filter.",
+            stamp: "🐱 Hello Kitty Era"
+          },
+          {
+            phrase: "Who u tryna impress?",
+            context: "Her 2023 archived debut video questioning makeup reasons.",
+            stamp: "🎀 Classic Comeback"
+          },
+          {
+            phrase: "Dad is literally my favorite, I love him so much!",
+            context: "Dedicating a warm Father's Day milestone vlog in June 2024.",
+            stamp: "👨‍👧 Sweet Father Vlog"
+          },
+          {
+            phrase: "Get Ready With Me to do literally nothing today...",
+            context: "Classic relatable weekend opening lines on her daily cosmetics updates.",
+            stamp: "💄 Daily Routine"
+          },
+          {
+            phrase: "My sisters Dana and Dimedilean are popular but I have the curls!",
+            context: "Talking about her family's social media popularity.",
+            stamp: "👭 Sisterly Bonds"
+          },
+          {
+            phrase: "Temu, please do not ruin my transition video!",
+            context: "Playful sibling interaction as her brother sneaks into her frame.",
+            stamp: "👶 Sibling Jokes"
+          }
+        ],
+
+        quoteLog: "Tap any quote below to load her iconic dialogues into this console!",
+
+        showToast(message, type = 'success') {
+          this.toast.message = message;
+          this.toast.type = type;
+          this.toast.visible = true;
+          setTimeout(() => { this.toast.visible = false; }, 3200);
+        },
+
+        handleGlobalClick(e) {
+          if (e.target.closest('button') || e.target.closest('input') || e.target.closest('textarea') || e.target.closest('a')) {
+            return;
+          }
+          const id = Date.now() + Math.random();
+          const items = ['💖', '✨', '🌸', '🎀', '🌟'];
+          const text = items[Math.floor(Math.random() * items.length)];
+          this.particles.push({ id, x: e.clientX, y: e.clientY, text });
+          
+          setTimeout(() => {
+            this.particles = this.particles.filter(p => p.id !== id);
+          }, 1200);
+        },
+
+        handleLikePage() {
+          if (!this.hasLiked) {
+            this.likesCount++;
+            this.hasLiked = true;
+            this.showToast('Thank you for supporting Esli! You added a Heart! 💖');
+          } else {
+            this.likesCount--;
+            this.hasLiked = false;
+            this.showToast('Removed your Heart support.', 'error');
+          }
+        },
+
+        toggleTheme() {
+          this.isDarkMode = !this.isDarkMode;
+          this.showToast(this.isDarkMode ? 'Switched to Deep Magenta Dark Theme 🔮' : 'Switched to Light Theme 🌸');
+        },
+
+        handleGrwmMix() {
+          let baseScore = 80;
+          if (this.grwmHair === 'Pretty Curls') baseScore += 8;
+          if (this.grwmAccessory === 'Hello Kitty Clips') baseScore += 10;
+          if (this.grwmOutfit === 'Off-The-Shoulder Blue') baseScore += 2;
+          const randomBoost = Math.floor(Math.random() * 5);
+          this.grwmScore = Math.min(100, baseScore + randomBoost);
+          this.showToast(`OOTD compiled successfully! Viral reach: ${this.grwmScore}% ✨`);
+        },
+
+        handleAddMessage() {
+          if (!this.newName.trim() || !this.newMessage.trim()) {
+            this.showToast('Please fill out all fields first!', 'error');
+            return;
+          }
+          this.fanMessages.unshift({
+            id: Date.now(),
+            name: this.newName,
+            text: this.newMessage,
+            time: 'Just now',
+            avatar: this.selectedAvatar
+          });
+          this.newName = '';
+          this.newMessage = '';
+          this.showToast('Your message has been posted to the Live Fan Board! 💖');
+        },
+
+        handleAnswerSelect(option) {
+          if (this.showExplanation) return;
+          this.selectedOption = option;
+          if (option === this.quizQuestions[this.currentQuestion].answer) {
+            this.score++;
+            this.showToast('Correct Answer! 🎉');
+          } else {
+            this.showToast('Incorrect answer! 🌸', 'error');
+          }
+          this.showExplanation = true;
+        },
+
+        handleNextQuestion() {
+          this.selectedOption = null;
+          this.showExplanation = false;
+          if (this.currentQuestion < this.quizQuestions.length - 1) {
+            this.currentQuestion++;
+          } else {
+            this.quizFinished = true;
+          }
+        },
+
+        resetQuiz() {
+          this.currentQuestion = 0;
+          this.selectedOption = null;
+          this.score = 0;
+          this.showExplanation = false;
+          this.quizFinished = false;
+        },
+
+        playQuote(phrase, stamp) {
+          this.quoteLog = `"${phrase}" - ${stamp}`;
+          this.showToast(`Quote loaded! 🎙️`);
+        },
+
+        getQuizBtnClass(option) {
+          if (!this.showExplanation) {
+            return this.isDarkMode 
+              ? 'bg-[#4d0c2c] text-pink-100 border-pink-900/60 hover:bg-[#5e1137]' 
+              : 'bg-white text-gray-700 border-pink-100 hover:bg-pink-50';
+          }
+          const isCorrect = option === this.quizQuestions[this.currentQuestion].answer;
+          const isSelected = option === this.selectedOption;
+          
+          if (isCorrect) {
+            return 'bg-green-100 text-green-800 border-green-500 ring-1 ring-green-400';
+          }
+          if (isSelected) {
+            return 'bg-rose-100 text-rose-800 border-rose-500 ring-1 ring-rose-400';
+          }
+          return this.isDarkMode 
+            ? 'bg-[#30051a] text-pink-300/40 border-pink-900/20' 
+            : 'bg-white text-gray-300 border-gray-100';
+        }
+      };
+    }
+  </script>
+
+  <!-- Load Alpine.js defer to ensure the DOM and fanSite() function are registered completely first -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body 
+  x-data="fanSite()"
+  @scroll.window="scrollY = window.scrollY"
+  @click="handleGlobalClick($event)"
+  :class="isDarkMode ? 'text-pink-100' : 'text-gray-800'"
+  class="min-h-screen relative overflow-x-hidden font-sans pb-12 transition-colors duration-500"
+>
+
+  <!-- Dynamic Ambient Background with Folding Polka Dot Simulated Movement -->
+  <div class="absolute inset-0 -z-50 overflow-hidden transition-colors duration-500">
+    <div :class="isDarkMode ? 'polka-dot-pattern-dark' : 'polka-dot-pattern-light'" class="absolute inset-0 transition-opacity duration-500"></div>
+    <div :class="isDarkMode ? 'animated-grad-bg-dark' : 'animated-grad-bg-light'" class="absolute inset-0 transition-opacity duration-500"></div>
+
+    <!-- Morphing, sliding, auto-folding glowing pink/magenta circles -->
+    <div :class="isDarkMode ? 'polka-circle-1-dark' : 'polka-circle-1-light'" class="absolute top-1/4 left-1/12 w-72 h-72"></div>
+    <div :class="isDarkMode ? 'polka-circle-2-dark' : 'polka-circle-2-light'" class="absolute top-1/2 right-1/10 w-96 h-96"></div>
+    <div :class="isDarkMode ? 'polka-circle-3-dark' : 'polka-circle-3-light'" class="absolute bottom-1/12 left-1/3 w-80 h-80"></div>
+    <div :class="isDarkMode ? 'polka-circle-1-dark' : 'polka-circle-1-light'" class="absolute top-1/12 right-1/4 w-60 h-60" style="animation-delay: -5s"></div>
+  </div>
+
+  <!-- Click Particles -->
+  <template x-for="p in particles" :key="p.id">
+    <span 
+      class="absolute spawned-particle text-2xl z-50 select-none"
+      :style="`left: ${p.x}px; top: ${p.y + scrollY}px; transform: translate(-50%, -50%)`"
+      x-text="p.text"
+    ></span>
+  </template>
+
+  <!-- Custom Toast Notification -->
+  <div 
+    x-show="toast.visible"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 translate-y-4"
+    x-transition:enter-end="opacity-100 translate-y-0"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100 translate-y-0"
+    x-transition:leave-end="opacity-0 translate-y-4"
+    :class="toast.type === 'error' ? 'bg-rose-50 border-rose-200 text-rose-800' : 'bg-white border-pink-100 text-pink-800'"
+    class="fixed bottom-6 right-6 z-50 px-6 py-4 rounded-2xl shadow-2xl border flex items-center gap-3 max-w-sm"
+    style="display: none;"
+  >
+    <span class="text-xl" x-text="toast.type === 'error' ? '🌸' : '💖'"></span>
+    <p class="text-sm font-semibold" x-text="toast.message"></p>
+  </div>
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600 text-white text-center py-2.5 px-4 text-xs md:text-sm font-bold tracking-wider shadow-md flex items-center justify-center gap-2 relative z-10">
+    <span class="bg-white text-pink-600 text-[10px] uppercase font-black px-2.5 py-0.5 rounded-full">Official Launch</span>
+    <span>✨ Just made this website today • Welcome to the Official Esli Mendez Fan Hub! 💖</span>
+  </div>
+
+  <!-- Inner Content Wrapper -->
+  <div class="max-w-7xl mx-auto px-4 py-4 relative">
+
+    <!-- ================= HERO BANNER CONTAINER ================= -->
+    <div 
+      class="relative w-full h-48 sm:h-64 md:h-80 rounded-3xl overflow-hidden shifting-banner-grad"
+      :style="`transform: translateY(${Math.min(scrollY * 0.08, 60)}px) scale(${1 + Math.min(scrollY * 0.0001, 0.04)}); transition: transform 0.1s ease-out;`"
+    >
+      <img 
+        src="https://yt3.googleusercontent.com/D5hG7qXWrlMyoOjd4oROfux7d2Xb2dq73In3HadlKiW6EqRU4T3gpGN4x6b1LoZSxBxFR0pf=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" 
+        alt="Esli Mendez Fan Background Banner" 
+        class="w-full h-full object-cover select-none"
+        :style="`transform: translateY(${scrollY * 0.02}px) scale(1.01)`"
+      />
+      
+      <!-- Multi-Directional Edge Gradients for seamless blend -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#fff5f6] via-transparent to-black/10"></div>
+      <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-pink-500/20 to-transparent"></div>
+      <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-fuchsia-500/20 to-transparent"></div>
+      
+      <!-- Inside-banner floating sparkles -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <span class="absolute top-8 left-12 text-white text-3xl animate-pulse">✨</span>
+        <span class="absolute bottom-12 right-20 text-pink-200 text-2xl animate-bounce">💖</span>
+      </div>
+
+      <!-- Pure rainbow gradient accent strip -->
+      <div class="absolute top-4 right-4 w-28 h-4 rounded-full shadow-lg border border-white/60 rainbow-gradient-bar"></div>
+    </div>
+
+    <!-- ================= CHANNEL PROFILE OVERLAY CARD ================= -->
+    <div class="relative z-20 max-w-6xl mx-auto -mt-16 sm:-mt-24 px-6">
+      <div 
+        :class="isDarkMode ? 'bg-[#3b0920]/80 border-pink-900/60 backdrop-blur-2xl' : 'bg-white/80 border-pink-100 backdrop-blur-xl'"
+        class="rounded-2xl p-6 shadow-xl border flex flex-col md:flex-row items-center md:items-end justify-between gap-6 transition-all duration-300"
+      >
+        <div class="flex flex-col sm:flex-row items-center sm:items-end gap-5 text-center sm:text-left">
+          
+          <!-- Large Overlapping Avatar Profile Circle -->
+          <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-pink-500 overflow-hidden shadow-xl bg-white shrink-0 transform hover:scale-105 transition-transform duration-300">
+            <img 
+              src="https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/601814530_18059982197642767_4801963973831483693_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ig_cache_key=Mzc5MzA1OTMxODMxMzQzMjE2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTI5MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Ps0_YhiIuOwQ7kNvwF78hNA&_nc_oc=AdoYF612YMoTuuTj8OaWQYp_zX82Txvkx4iveXgF5PSIfU3Tv-wilBeEttaMKIcH0To&_nc_ad=z-m&_nc_cid=1087&_nc_zt=23&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_gid=4GXf4YRwnKLuXumLkjd7rg&_nc_ss=7a22e&oh=00_AQDiUEMEmI2FQguITGR_JNVw6iUVu4veC-dPUieW4UhAtw&oe=6A51C03A" 
+              alt="Esli Mendez Portrait"
+              class="w-full h-full object-cover" 
+            />
+          </div>
+
+          <!-- Title Details and Verified Checkmark Logo -->
+          <div class="space-y-1.5">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2.5">
+              <h1 
+                class="font-black text-5xl sm:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-fuchsia-500 to-pink-600 tracking-tight text-neon-glow"
+                style="font-family: 'Comfortaa', 'Playfair Display', cursive"
+              >
+                Esli
+              </h1>
+              
+              <!-- Clean Vecteezy Checkmark Logo -->
+              <div class="relative group shrink-0">
+                <img 
+                  src="https://static.vecteezy.com/system/resources/thumbnails/047/309/980/small/verified-badge-profile-icon-png.png" 
+                  alt="Verified Badge" 
+                  class="w-10 h-10 object-contain drop-shadow-sm transform hover:scale-110 transition-transform duration-200"
+                />
+              </div>
+            </div>
+
+            <!-- Combined cross-platform audience statistics -->
+            <p 
+              :class="isDarkMode ? 'text-pink-300' : 'text-gray-500'"
+              class="text-xs sm:text-sm font-semibold tracking-wide flex items-center justify-center sm:justify-start gap-3 flex-wrap"
+            >
+              <span class="text-pink-500 font-extrabold">@.eslis</span>
+              <span class="w-1.5 h-1.5 bg-pink-400 rounded-full"></span>
+              <span class="text-pink-600 font-black">7M+ Family Across Platforms</span>
+              <span class="w-1.5 h-1.5 bg-pink-400 rounded-full"></span>
+              <span class="text-fuchsia-600 font-black">485M+ Total Likes</span>
+            </p>
+            <p 
+              :class="isDarkMode ? 'text-pink-200/70' : 'text-gray-400'"
+              class="text-xs max-w-md hidden sm:block"
+            >
+              Relatable lifestyle vlogger, GRWM stylist, and TX-born social media celebrity.
+            </p>
+          </div>
+        </div>
+
+        <!-- Theme Toggle + Hearts Support -->
+        <div class="shrink-0 flex items-center gap-3">
+          <button 
+            @click="toggleTheme()"
+            title="Change Theme Mode"
+            :class="isDarkMode ? 'bg-[#5e1035] hover:bg-[#7a1848] text-yellow-300 border-pink-700/60' : 'bg-white hover:bg-pink-50 text-pink-600 border-pink-200'"
+            class="p-3 rounded-full shadow-md transition-all transform active:scale-95 border flex items-center justify-center"
+          >
+            <!-- Sun/Moon template -->
+            <template x-if="isDarkMode">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+              </svg>
+            </template>
+            <template x-if="!isDarkMode">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            </template>
+          </button>
+
+          <!-- FIXED HEARTS BUTTON: Replaced raw component tag with inline beautiful SVG -->
+          <button 
+            @click="handleLikePage()"
+            :class="hasLiked ? 'bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white hover:shadow-pink-200' : 'bg-white text-pink-600 border border-pink-200 hover:bg-pink-50/50'"
+            class="flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs font-black transition-all shadow-md transform active:scale-95"
+          >
+            <!-- Inline Heart SVG -->
+            <svg 
+              class="w-4 h-4 transition-transform duration-200" 
+              :class="hasLiked ? 'scale-110' : ''" 
+              viewBox="0 0 24 24" 
+              :fill="hasLiked ? 'currentColor' : 'none'" 
+              stroke="currentColor" 
+              stroke-width="2.5" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"
+            >
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            </svg>
+            <span x-text="likesCount.toLocaleString() + ' Hearts'"></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= MAIN LAYOUT GRID (Console sidebar + Dynamic screen) ================= -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-10 max-w-6xl mx-auto items-start">
+      
+      <!-- LEFT CHANNEL NAVIGATION SIDEBAR -->
+      <aside class="lg:col-span-3 space-y-6 w-full">
+        
+        <div 
+          :class="isDarkMode ? 'bg-[#3b0920]/80 border-pink-900/60' : 'bg-white/80 border-pink-100'"
+          class="p-5 rounded-2xl border shadow-md transition-colors duration-500"
+        >
+          <h3 
+            :class="isDarkMode ? 'text-pink-300/80' : 'text-gray-400'"
+            class="text-xs font-black uppercase tracking-widest mb-4 px-2"
+          >
+            Console Channels
+          </h3>
+          
+          <nav class="space-y-1">
+            <template x-for="tab in tabs" :key="tab.id">
+              <button
+                @click="activeTab = tab.id"
+                :class="activeTab === tab.id ? 'bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white shadow-lg' : isDarkMode ? 'text-pink-100 hover:text-white hover:bg-pink-900/40' : 'text-gray-600 hover:text-pink-600 hover:bg-pink-50/50'"
+                class="w-full py-3 px-4 font-black text-xs md:text-sm text-left transition-all rounded-xl flex items-center gap-3"
+              >
+                <span class="text-lg" x-text="tab.icon"></span>
+                <span x-text="tab.label"></span>
+              </button>
+            </template>
+          </nav>
+        </div>
+
+        <!-- Social Shortcuts & Simplified TikTok button -->
+        <div 
+          :class="isDarkMode ? 'bg-[#3b0920]/80 border-pink-900/60' : 'bg-white/80 border-pink-100'"
+          class="p-5 rounded-2xl border shadow-md space-y-4 transition-colors duration-500"
+        >
+          <h3 
+            :class="isDarkMode ? 'text-pink-300/80' : 'text-gray-400'"
+            class="text-xs font-black uppercase tracking-widest px-2"
+          >
+            Hot Links
+          </h3>
+          
+          <div class="space-y-2">
+            <!-- Pulsing TikTok CTA Button -->
+            <a 
+              href="https://www.tiktok.com/@.eslis" 
+              target="_blank" 
+              class="tiktok-gradient-btn w-full py-3.5 px-4 rounded-xl text-white font-black text-xs md:text-sm flex items-center justify-center gap-2.5 shadow-lg transform hover:-translate-y-0.5 transition-all"
+            >
+              <!-- TikTok Icon Inline SVG -->
+              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.63 4.15 1.12 1.26 2.7 2.01 4.31 2.22V10.1c-1.4-.17-2.75-.76-3.83-1.67-.62-.53-1.12-1.19-1.48-1.94V15.5c-.01 1.56-.47 3.11-1.34 4.38-1.51 2.22-4.14 3.59-6.84 3.47-3.11-.14-5.91-2.31-6.68-5.33-.94-3.64 1.05-7.6 4.65-8.77 1.05-.34 2.17-.41 3.25-.21V12.7c-.82-.26-1.74-.21-2.51.21-1.46.77-2.22 2.51-1.8 4.13.36 1.41 1.66 2.45 3.12 2.47 1.63.02 3.06-1.1 3.39-2.7.09-.43.12-.87.12-1.31V0z"/>
+              </svg>
+              <span>TikTok</span>
+            </a>
+
+            <!-- Sub Instagram and YouTube buttons -->
+            <div class="grid grid-cols-2 gap-2">
+              <a 
+                href="https://www.instagram.com/aayesli" 
+                target="_blank" 
+                class="py-3 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-purple-600 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-sm transform hover:scale-[1.02] transition-all"
+              >
+                <!-- Instagram Icon Inline SVG -->
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+                <span>Instagram</span>
+              </a>
+              <a 
+                href="https://www.youtube.com/@eslielsa" 
+                target="_blank" 
+                class="py-3 px-3 rounded-xl bg-red-600 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-sm transform hover:scale-[1.02] transition-all"
+              >
+                <!-- YouTube Icon Inline SVG -->
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                <span>YouTube</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT COLUMN: Dynamic Screen Panel -->
+      <main 
+        :class="isDarkMode ? 'bg-[#31071a]/95 border-pink-900/60 shadow-pink-900/10' : 'bg-white/95 border-pink-100 shadow-pink-100/10'"
+        class="lg:col-span-9 w-full rounded-3xl p-6 md:p-8 shadow-xl border min-h-[440px] transition-all duration-500 overflow-hidden"
+      >
+        
+        <!-- ================= FEED CHANNEL: HOME ================= -->
+        <div x-show="activeTab === 'home'" class="space-y-10 w-full" x-transition>
+          
+          <!-- Key facts grid -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+            <div 
+              :class="isDarkMode ? 'bg-[#4d0c2c]/50 border-pink-800/40 text-pink-100' : 'bg-gradient-to-br from-pink-50/50 to-fuchsia-50/40 border-pink-50/80'"
+              class="p-4 rounded-xl text-center border transition-all duration-500"
+            >
+              <span class="text-2xl">🎂</span>
+              <h4 :class="isDarkMode ? 'text-pink-300' : 'text-gray-400'" class="text-[10px] font-extrabold uppercase mt-1 tracking-wider">Born</h4>
+              <p class="text-sm font-black text-pink-505 mt-0.5">August 8, 2011</p>
+            </div>
+            <div 
+              :class="isDarkMode ? 'bg-[#4d0c2c]/50 border-pink-800/40 text-pink-100' : 'bg-gradient-to-br from-pink-50/50 to-fuchsia-50/40 border-pink-50/80'"
+              class="p-4 rounded-xl text-center border transition-all duration-500"
+            >
+              <span class="text-2xl">✨</span>
+              <h4 :class="isDarkMode ? 'text-pink-300' : 'text-gray-400'" class="text-[10px] font-extrabold uppercase mt-1 tracking-wider">Zodiac</h4>
+              <p class="text-sm font-black text-pink-505 mt-0.5">Leo 🦁</p>
+            </div>
+            <div 
+              :class="isDarkMode ? 'bg-[#4d0c2c]/50 border-pink-800/40 text-pink-100' : 'bg-gradient-to-br from-pink-50/50 to-fuchsia-50/40 border-pink-50/80'"
+              class="p-4 rounded-xl text-center border transition-all duration-500"
+            >
+              <span class="text-2xl">📍</span>
+              <h4 :class="isDarkMode ? 'text-pink-300' : 'text-gray-400'" class="text-[10px] font-extrabold uppercase mt-1 tracking-wider">Hometown</h4>
+              <p class="text-sm font-black text-pink-505 mt-0.5">Laredo, TX</p>
+            </div>
+            <div 
+              :class="isDarkMode ? 'bg-[#4d0c2c]/50 border-pink-800/40 text-pink-100' : 'bg-gradient-to-br from-pink-50/50 to-fuchsia-50/40 border-pink-50/80'"
+              class="p-4 rounded-xl text-center border transition-all duration-500"
+            >
+              <span class="text-2xl">🌸</span>
+              <h4 :class="isDarkMode ? 'text-pink-300' : 'text-gray-400'" class="text-[10px] font-extrabold uppercase mt-1 tracking-wider">Current Age</h4>
+              <p class="text-sm font-black text-pink-505 mt-0.5">14 Years Old</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center w-full">
+            
+            <!-- Hero Photo snapshot -->
+            <div class="md:col-span-5 relative group w-full">
+              <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-fuchsia-500 rounded-2xl rotate-3 scale-100 opacity-20 group-hover:rotate-6 group-hover:scale-105 transition-all duration-300"></div>
+              
+              <div 
+                :class="isDarkMode ? 'bg-[#3b0920]' : 'bg-white border border-pink-100'"
+                class="p-3 rounded-2xl shadow-lg transform transition-all duration-500"
+              >
+                <img 
+                  src="https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/601814530_18059982197642767_4801963973831483693_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ig_cache_key=Mzc5MzA1OTMxODMxMzQzMjE2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTI5MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Ps0_YhiIuOwQ7kNvwF78hNA&_nc_oc=AdoYF612YMoTuuTj8OaWQYp_zX82Txvkx4iveXgF5PSIfU3Tv-wilBeEttaMKIcH0To&_nc_ad=z-m&_nc_cid=1087&_nc_zt=23&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_gid=4GXf4YRwnKLuXumLkjd7rg&_nc_ss=7a22e&oh=00_AQDiUEMEmI2FQguITGR_JNVw6iUVu4veC-dPUieW4UhAtw&oe=6A51C03A" 
+                  alt="Esli curly hair signature style" 
+                  class="w-full h-auto rounded-xl object-cover aspect-[3/4] shadow-inner"
+                />
+                <div class="pt-3 text-center">
+                  <span class="font-extrabold text-pink-505 text-sm tracking-tight">Esli Mendez ✨</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Biography context -->
+            <div class="md:col-span-7 space-y-5 w-full">
+              <div>
+                <span class="bg-pink-100 text-pink-700 font-black text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">Biography Profile</span>
+                <h3 class="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-fuchsia-505 mt-2 mb-2">Esli's Story</h3>
+                <p :class="isDarkMode ? 'text-pink-100/80' : 'text-gray-600'" class="leading-relaxed text-xs md:text-sm">
+                  Esli is a premier digital creator and lifestyle specialist who has captured a highly dedicated fan community of over <strong>6.8 million followers</strong> on her TikTok handle, <strong>@.eslis</strong>.
+                </p>
+              </div>
+
+              <p :class="isDarkMode ? 'text-pink-100/80' : 'text-gray-600'" class="leading-relaxed text-xs md:text-sm">
+                Best known for her hilarious family interactions, beauty guides, and daily Get Ready With Me (GRWM) routines, her rise to stardom has been driven by her wholesome authenticity and charismatic energy.
+              </p>
+
+              <div 
+                :class="isDarkMode ? 'bg-[#4d0c2c]/40' : 'bg-gradient-to-r from-pink-50 to-fuchsia-50'"
+                class="p-4 rounded-xl border-l-4 border-pink-500 transition-colors duration-500"
+              >
+                <h4 class="font-bold text-pink-505 text-xs mb-1">🎬 Fast Fact</h4>
+                <p :class="isDarkMode ? 'text-pink-200' : 'text-pink-900'" class="text-[11px] leading-relaxed">
+                  Her earliest popular archived TikTok went viral in 2023 with the quote: <em>"who u tryna impress"</em>. She continues to be a favorite of teens everywhere!
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Family Inner Circle segment -->
+          <div class="pt-8 border-t border-pink-100/60 w-full">
+            <h3 class="text-xl font-black text-pink-505 mb-6 text-center">Esli's Inner Circle & Family 💖</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+              
+              <div 
+                :class="isDarkMode ? 'bg-[#3b0920]/60 border-pink-900/40' : 'bg-white border-pink-50/80'"
+                class="p-5 rounded-xl shadow-sm border transition-colors duration-500"
+              >
+                <div class="text-3xl mb-2">👨‍👧</div>
+                <h4 :class="isDarkMode ? 'text-pink-100' : 'text-gray-800'" class="font-extrabold text-sm">Supportive Dad</h4>
+                <p :class="isDarkMode ? 'text-pink-200/70' : 'text-gray-500'" class="text-[11px] mt-2 leading-relaxed">
+                  Esli enjoys a beautiful relationship with her dad, who regularly appears in her videos. In June 2024, she shared a sweet milestone video celebrating him.
+                </p>
+              </div>
+
+              <div 
+                :class="isDarkMode ? 'bg-[#3b0920]/60 border-pink-900/40' : 'bg-white border-pink-50/80'"
+                class="p-5 rounded-xl shadow-sm border transition-colors duration-500"
+              >
+                <div class="text-3xl mb-2">👶</div>
+                <h4 :class="isDarkMode ? 'text-pink-100' : 'text-gray-800'" class="font-extrabold text-sm">Brother Temu</h4>
+                <p :class="isDarkMode ? 'text-pink-200/70' : 'text-gray-500'" class="text-[11px] mt-2 leading-relaxed">
+                  Her younger brother, known by her audience as "Temu", contributes adorable sibling energy and banter to her vlog background segments.
+                </p>
+              </div>
+
+              <div 
+                :class="isDarkMode ? 'bg-[#3b0920]/60 border-pink-900/40' : 'bg-white border-pink-50/80'"
+                class="p-5 rounded-xl shadow-sm border transition-colors duration-500"
+              >
+                <div class="text-3xl mb-2">👭</div>
+                <h4 :class="isDarkMode ? 'text-pink-100' : 'text-gray-800'" class="font-extrabold text-sm">Sisters Dana & Dimedilean</h4>
+                <p :class="isDarkMode ? 'text-pink-200/70' : 'text-gray-500'" class="text-[11px] mt-2 leading-relaxed">
+                  Talent runs deep! Her sisters Dana Mendez and Dimedilean Mendez are popular creators in their own right, accumulating millions of views!
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ================= FEED CHANNEL: PHOTO GALLERY ================= -->
+        <div x-show="activeTab === 'photos'" class="space-y-8 animate-fadeIn w-full" style="display: none;" x-transition>
+          <div class="text-center max-w-xl mx-auto w-full">
+            <span class="bg-pink-100 text-pink-700 font-black text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">Aesthetic Portfolio</span>
+            <h3 class="text-2xl font-black text-pink-505 mt-2">Moment Snapshots</h3>
+            <p :class="isDarkMode ? 'text-pink-200/70' : 'text-gray-500'" class="mt-1 text-xs leading-relaxed">
+              Tap any of the polaroids below to view them in beautiful high-resolution lightbox views!
+            </p>
+          </div>
+
+          <!-- Polaroid Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-2 w-full">
+            <template x-for="(img, idx) in images" :key="idx">
+              <div 
+                @click="lightboxIndex = idx"
+                :class="isDarkMode ? 'bg-[#3a0820] border-pink-900/60' : 'bg-white border-pink-50'"
+                class="cursor-pointer p-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 border group w-full"
+              >
+                <div class="overflow-hidden rounded-lg bg-pink-50 aspect-[3/4] relative w-full">
+                  <img :src="img.url" :alt="img.title" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-pink-950/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="bg-white/95 text-pink-600 px-3.5 py-1.5 rounded-full text-[10px] font-black shadow-md tracking-wider">Inspect Look 🔎</span>
+                  </div>
+                </div>
+                <div class="mt-3 text-center">
+                  <span class="text-pink-550 font-extrabold text-[10px] uppercase tracking-wider" x-text="`Look #${idx + 1}`"></span>
+                  <h4 :class="isDarkMode ? 'text-pink-100' : 'text-gray-800'" class="text-sm font-black mt-0.5" x-text="img.title"></h4>
+                  <p :class="isDarkMode ? 'text-pink-200/60' : 'text-gray-400'" class="text-[10px] mt-0.5 line-clamp-2 px-1 leading-relaxed" x-text="img.desc"></p>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <!-- Image Lightbox Modal -->
+          <div 
+            x-show="lightboxIndex !== null" 
+            class="fixed inset-0 bg-black/95 backdrop-blur-md z-50 flex items-center justify-center p-4"
+            style="display: none;"
+          >
+            <div 
+              @click="lightboxIndex = null"
+              class="absolute top-4 right-4 text-white text-sm cursor-pointer hover:text-pink-400 p-2 font-black transition-colors bg-white/10 px-4 py-2 rounded-full"
+            >
+              ✕ Close
+            </div>
+            
+            <div class="max-w-xl w-full flex flex-col items-center relative" @click.away="lightboxIndex = null">
+              <button 
+                @click.stop="lightboxIndex = (lightboxIndex - 1 + images.length) % images.length"
+                class="absolute -left-4 sm:-left-16 top-1/2 -translate-y-1/2 text-white bg-white/10 hover:bg-white/25 px-4 py-3 rounded-full text-sm font-bold transition-all"
+              >
+                ◀
+              </button>
+
+              <img 
+                :src="images[lightboxIndex]?.url" 
+                class="max-h-[70vh] object-contain rounded-xl shadow-2xl border border-white/10"
+              />
+
+              <div class="text-center mt-4 text-white max-w-sm">
+                <span class="text-pink-400 text-[10px] font-black uppercase tracking-widest">Esli Mendez Lookbook</span>
+                <h3 class="text-xl font-extrabold text-pink-200 mt-1" x-text="images[lightboxIndex]?.title"></h3>
+                <p class="text-xs text-gray-300 mt-1 leading-relaxed" x-text="images[lightboxIndex]?.desc"></p>
+              </div>
+
+              <button 
+                @click.stop="lightboxIndex = (lightboxIndex + 1) % images.length"
+                class="absolute -right-4 sm:-right-16 top-1/2 -translate-y-1/2 text-white bg-white/10 hover:bg-white/25 px-4 py-3 rounded-full text-sm font-bold transition-all"
+              >
+                ▶
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= FEED CHANNEL: GRWM GAME ================= -->
+        <div x-show="activeTab === 'grwm'" class="space-y-8 animate-fadeIn w-full" style="display: none;" x-transition>
+          <div class="text-center max-w-xl mx-auto w-full">
+            <span class="bg-pink-100 text-pink-700 font-black text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">Aesthetic Creator Simulation</span>
+            <h3 class="text-2xl font-black text-pink-505 mt-2">Outfit Creator Game 🎀</h3>
+            <p :class="isDarkMode ? 'text-pink-200/70' : 'text-gray-500'" class="mt-1 text-xs leading-relaxed">
+              Mix and match her favorite styles to predict your simulated TikTok viral score!
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2 items-stretch w-full">
+            
+            <!-- Selectors -->
+            <div 
+              :class="isDarkMode ? 'bg-[#3a0820] border-pink-900/40' : 'bg-pink-5/30 border-pink-100'"
+              class="p-5 rounded-xl border space-y-4 md:col-span-7 w-full flex flex-col justify-between"
+            >
+              <div class="space-y-4">
+                <!-- Hair style Selection -->
+                <div>
+                  <label class="block text-[10px] font-black text-pink-500 uppercase tracking-wider mb-2">1. Choose Hair Style</label>
+                  <div class="grid grid-cols-3 gap-1.5">
+                    <template x-for="h in ['Pretty Curls', 'Sleek & Straight', 'Casual High Ponytail']" :key="h">
+                      <button
+                        @click="grwmHair = h; grwmScore = null;"
+                        :class="grwmHair === h ? 'bg-pink-600 text-white border-pink-600 shadow-md scale-105' : isDarkMode ? 'bg-[#4d0c2c] text-pink-100 border-pink-900/60 hover:bg-[#5e1137]' : 'bg-white text-gray-600 border-pink-200 hover:bg-pink-50'"
+                        class="p-2.5 text-[11px] rounded-lg border font-bold transition-all"
+                        x-text="h"
+                      ></button>
+                    </template>
+                  </div>
+                </div>
+
+                <!-- Accessory Selection -->
+                <div>
+                  <label class="block text-[10px] font-black text-pink-505 uppercase tracking-wider mb-2">2. Match Face Filter / Accessory</label>
+                  <div class="grid grid-cols-3 gap-1.5">
+                    <template x-for="acc in ['Hello Kitty Clips', 'Gold \'E\' Pendant', 'Soft Glow Blush']" :key="acc">
+                      <button
+                        @click="grwmAccessory = acc; grwmScore = null;"
+                        :class="grwmAccessory === acc ? 'bg-pink-600 text-white border-pink-600 shadow-md scale-105' : isDarkMode ? 'bg-[#4d0c2c] text-pink-100 border-pink-900/60 hover:bg-[#5e1137]' : 'bg-white text-gray-600 border-pink-200 hover:bg-pink-50'"
+                        class="p-2.5 text-[11px] rounded-lg border font-bold transition-all"
+                        x-text="acc"
+                      ></button>
+                    </template>
+                  </div>
+                </div>
+
+                <!-- Outfit Selection -->
+                <div>
+                  <label class="block text-[10px] font-black text-pink-500 uppercase tracking-wider mb-2">3. Select Aesthetic Outfit</label>
+                  <div class="grid grid-cols-3 gap-1.5">
+                    <template x-for="out in ['Off-The-Shoulder Blue', 'Soft Black Crop Top', 'Pink Velvet Zip-Up']" :key="out">
+                      <button
+                        @click="grwmOutfit = out; grwmScore = null;"
+                        :class="grwmOutfit === out ? 'bg-pink-600 text-white border-pink-600 shadow-md scale-105' : isDarkMode ? 'bg-[#4d0c2c] text-pink-100 border-pink-900/60 hover:bg-[#5e1137]' : 'bg-white text-gray-600 border-pink-200 hover:bg-pink-50'"
+                        class="p-2.5 text-[11px] rounded-lg border font-bold transition-all"
+                        x-text="out"
+                      ></button>
+                    </template>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                @click="handleGrwmMix()"
+                class="w-full bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600 hover:from-pink-600 hover:to-fuchsia-700 text-white font-black py-3 rounded-lg text-xs shadow-md transition-all transform active:scale-95 flex items-center justify-center gap-2 mt-4"
+              >
+                <span>🎀</span> Compile GRWM Score
+              </button>
+            </div>
+
+            <!-- Showroom Preview Card -->
+            <div 
+              :class="isDarkMode ? 'bg-[#290519] border-pink-900/60' : 'bg-gradient-to-tr from-pink-100/50 to-purple-50/50 border-pink-100'"
+              class="p-6 rounded-xl border text-center relative overflow-hidden md:col-span-5 w-full flex flex-col justify-center"
+            >
+              <h4 class="text-pink-500 font-extrabold text-xs mb-3 uppercase tracking-wider">Fit Showcase</h4>
+              
+              <div 
+                :class="isDarkMode ? 'bg-pink-950/20 text-pink-200' : 'bg-white/80 text-gray-500'"
+                class="p-4 rounded-lg space-y-3 shadow-inner text-left max-w-xs mx-auto text-[11px] w-full"
+              >
+                <p><strong>Hair:</strong> <span class="text-pink-600 font-bold" x-text="grwmHair"></span></p>
+                <p><strong>Accessory:</strong> <span class="text-pink-600 font-bold" x-text="grwmAccessory"></span></p>
+                <p><strong>Outfit:</strong> <span class="text-pink-600 font-bold" x-text="grwmOutfit"></span></p>
+              </div>
+
+              <div x-show="grwmScore !== null" class="mt-4 p-3 bg-white rounded-lg border-2 border-pink-500 animate-pulse text-center w-full max-w-xs mx-auto" style="display: none;">
+                <span class="text-[10px] text-pink-600 font-black uppercase block">Simulated Reach Score</span>
+                <span class="text-3xl font-black text-pink-700" x-text="grwmScore + '%'"></span>
+                <p class="text-[10px] text-gray-400 mt-1" x-text="grwmScore > 90 ? '🔥 Viral OOTD Challenge success!' : '✨ Looking lovely and ready to vlog!'"></p>
+              </div>
+
+              <div x-show="grwmScore === null" class="mt-4 p-4 bg-pink-50 rounded-lg border border-dashed border-pink-200 w-full max-w-xs mx-auto">
+                <p class="text-[10px] text-pink-600 italic">Select choices on left then compile!</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================= FEED CHANNEL: FAN BOARD ================= -->
+        <div x-show="activeTab === 'fanboard'" class="space-y-8 animate-fadeIn w-full" style="display: none;" x-transition>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full">
+            
+            <!-- Submit Form -->
+            <div 
+              :class="isDarkMode ? 'bg-[#3a0820] border-pink-900/40' : 'bg-pink-50/50 border-pink-100'"
+              class="p-5 rounded-xl border md:col-span-5 w-full"
+            >
+              <h3 class="text-lg font-black text-pink-700 mb-3 flex items-center gap-1.5">
+                <span>💌</span> Write Fan Mail
+              </h3>
+              
+              <form @submit.prevent="handleAddMessage()" class="space-y-3">
+                <div>
+                  <label class="block text-[10px] font-black text-pink-505 uppercase mb-1 tracking-wider">Your Fan Name</label>
+                  <input 
+                    type="text" 
+                    x-model="newName"
+                    placeholder="e.g. Elena_Grwm_88"
+                    className="w-full p-2.5 rounded-lg border focus:outline-none focus:ring-2 focus:ring-pink-500 text-xs bg-white text-gray-800 border-pink-200"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-[10px] font-black text-pink-505 uppercase mb-1 tracking-wider">Select Stamp Avatar</label>
+                  <div class="flex gap-1.5 flex-wrap">
+                    <template x-for="av in avatars" :key="av">
+                      <button 
+                        type="button"
+                        @click="selectedAvatar = av"
+                        :class="selectedAvatar === av ? 'bg-pink-200 border border-pink-500 scale-105' : 'bg-white border border-pink-100'"
+                        class="p-1.5 rounded text-base transition-transform active:scale-90 text-gray-800"
+                        x-text="av"
+                      ></button>
+                    </template>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-[10px] font-black text-pink-505 uppercase mb-1 tracking-wider">Love Letter Message</label>
+                  <textarea 
+                    rows="3"
+                    x-model="newMessage"
+                    placeholder="Write something sweet about Esli's styling or family vlogs!"
+                    class="w-full p-2.5 rounded-lg border focus:outline-none focus:ring-2 focus:ring-pink-500 text-xs bg-white text-gray-800 border-pink-200"
+                    required
+                  ></textarea>
+                </div>
+
+                <button 
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-pink-500 to-fuchsia-600 hover:from-pink-600 hover:to-fuchsia-700 text-white font-black py-2.5 rounded-lg text-xs shadow-md"
+                >
+                  Pin Letter to Fan Wall 🌸
+                </button>
+              </form>
+            </div>
+
+            <!-- Messages Stream -->
+            <div class="md:col-span-7 space-y-4 w-full">
+              <h3 class="text-lg font-black text-pink-705 flex items-center gap-1.5">
+                <span>✨</span> Fan Board Messages (<span x-text="fanMessages.length"></span>)
+              </h3>
+
+              <div class="space-y-3 max-h-[400px] overflow-y-auto pr-2 w-full">
+                <template x-for="msg in fanMessages" :key="msg.id">
+                  <div 
+                    :class="isDarkMode ? 'bg-[#3b0920]/80 border-pink-900/40' : 'bg-white border-pink-50'"
+                    class="p-3.5 rounded-xl border shadow-sm flex gap-3 transition-all w-full"
+                  >
+                    <div class="bg-pink-100/50 w-10 h-10 rounded-full flex items-center justify-center text-xl shrink-0" x-text="msg.avatar"></div>
+                    <div class="space-y-1 w-full">
+                      <div class="flex items-center gap-1.5">
+                        <span class="font-extrabold text-pink-500 text-xs" x-text="msg.name"></span>
+                        <span class="text-[9px] text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full" x-text="msg.time"></span>
+                      </div>
+                      <p :class="isDarkMode ? 'text-pink-100/70' : 'text-gray-600'" class="text-xs leading-relaxed" x-text="msg.text"></p>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================= FEED CHANNEL: TRIVIA QUIZ ================= -->
+        <div x-show="activeTab === 'quiz'" class="w-full space-y-6 animate-fadeIn" style="display: none;" x-transition>
+          <div class="text-center max-w-xl mx-auto w-full">
+            <span class="text-3xl">🏆</span>
+            <h3 class="text-xl font-black text-pink-500 mt-1">Are you a true Esli Fan?</h3>
+            <p :class="isDarkMode ? 'text-pink-300' : 'text-gray-500'" class="text-[10px] mt-0.5">Test your milestones of her career and journey!</p>
+          </div>
+
+          <div class="w-full max-w-2xl mx-auto">
+            <!-- In progress screen -->
+            <div 
+              x-show="!quizFinished"
+              :class="isDarkMode ? 'bg-[#3a0820] border-pink-900/40' : 'bg-[#fff5f6] border border-pink-100'"
+              class="p-5 rounded-2xl border space-y-4 transition-all duration-500 w-full"
+            >
+              <div class="flex justify-between items-center text-xs text-pink-505 font-bold">
+                <span x-text="'Question ' + (currentQuestion + 1) + ' of ' + quizQuestions.length"></span>
+                <span x-text="'Correct: ' + score + '/' + quizQuestions.length"></span>
+              </div>
+
+              <!-- Progress bar -->
+              <div class="w-full bg-pink-100 h-2 rounded-full overflow-hidden">
+                <div 
+                  class="bg-pink-500 h-full transition-all duration-300"
+                  :style="`width: ${((currentQuestion + 1) / quizQuestions.length) * 100}%`"
+                ></div>
+              </div>
+
+              <h4 :class="isDarkMode ? 'text-white' : 'text-gray-800'" class="text-sm md:text-base font-black" x-text="quizQuestions[currentQuestion].question"></h4>
+
+              <!-- Options -->
+              <div class="space-y-2 w-full">
+                <template x-for="option in quizQuestions[currentQuestion].options" :key="option">
+                  <button
+                    @click="handleAnswerSelect(option)"
+                    :disabled="showExplanation"
+                    :class="getQuizBtnClass(option)"
+                    class="w-full text-left p-3.5 rounded-lg border font-bold text-xs transition-all flex justify-between items-center"
+                  >
+                    <span x-text="option"></span>
+                    <span x-show="showExplanation && option === quizQuestions[currentQuestion].answer" class="text-green-600 font-black">✓ Correct</span>
+                    <span x-show="showExplanation && selectedOption === option && option !== quizQuestions[currentQuestion].answer" class="text-rose-600 font-black">✗ Wrong</span>
+                  </button>
+                </template>
+              </div>
+
+              <!-- Fact explanation -->
+              <div 
+                x-show="showExplanation"
+                :class="isDarkMode ? 'bg-[#5e1137] border-pink-800 text-pink-100' : 'bg-pink-100/60 border-pink-200 text-pink-900'"
+                class="p-3 rounded-lg border text-[10px] leading-relaxed w-full"
+                style="display: none;"
+              >
+                <strong>Fact File:</strong> <span x-text="quizQuestions[currentQuestion].fact"></span>
+              </div>
+
+              <!-- Next button -->
+              <button
+                x-show="showExplanation"
+                @click="handleNextQuestion()"
+                class="w-full bg-pink-600 hover:bg-pink-700 text-white font-black py-2.5 rounded-lg text-xs shadow-md transition-all mt-2"
+                style="display: none;"
+                x-text="currentQuestion < quizQuestions.length - 1 ? 'Next Challenge →' : 'Reveal Final Score 🏁'"
+              ></button>
+            </div>
+
+            <!-- Finished Screen -->
+            <div 
+              x-show="quizFinished"
+              :class="isDarkMode ? 'bg-[#3a0820] border-pink-900/40' : 'bg-[#fff5f6] border border-pink-100'"
+              class="p-8 rounded-3xl border text-center space-y-4 w-full"
+              style="display: none;"
+            >
+              <div class="text-5xl">👑</div>
+              <h4 class="text-xl font-black text-pink-700">Test Completed!</h4>
+              <p class="text-xs">
+                You scored <strong class="text-pink-500 text-base" x-text="score"></strong> correct out of <strong class="text-pink-500 text-base" x-text="quizQuestions.length"></strong>!
+              </p>
+
+              <div 
+                :class="isDarkMode ? 'bg-[#30051a] border-pink-900/30 text-pink-200' : 'bg-white border-pink-100 text-gray-500'"
+                class="text-[10px] p-4 rounded-xl border max-w-sm mx-auto leading-relaxed"
+              >
+                <span x-show="score === quizQuestions.length" class="font-bold text-pink-550">💅 Ultimate Superfan Status Confirmed! You follow her vlogs excellently.</span>
+                <span x-show="score >= 2 && score < quizQuestions.length" class="font-semibold text-pink-600">🌸 Great job! You know plenty about Esli and Laredo, TX roots!</span>
+                <span x-show="score < 2">✨ Standard Viewer. Subscribe and study up on her YouTube shorts!</span>
+              </div>
+
+              <button
+                @click="resetQuiz()"
+                class="bg-pink-600 hover:bg-pink-700 text-white font-black px-6 py-2 rounded-full text-xs shadow-md"
+              >
+                Play Again 🔄
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= FEED CHANNEL: SOUNDBOARD ================= -->
+        <div x-show="activeTab === 'quotes'" class="space-y-8 animate-fadeIn w-full" style="display: none;" x-transition>
+          <div class="text-center max-w-xl mx-auto w-full">
+            <span class="text-3xl">🎙️</span>
+            <h3 class="text-xl font-black text-pink-500 mt-2">Vlog Quotes Subtitle Simulator</h3>
+            <p :class="isDarkMode ? 'text-pink-200/70' : 'text-gray-500'" class="text-xs mt-0.5 leading-relaxed">
+              Tap any memorable phrase below to replicate Esli's most popular viral dialogues!
+            </p>
+          </div>
+
+          <!-- Console screen -->
+          <div class="bg-neutral-900 text-pink-400 p-5 rounded-xl font-mono text-center shadow-xl relative overflow-hidden max-w-xl mx-auto border-4 border-pink-200 w-full">
+            <div class="absolute top-2 left-3 flex gap-1">
+              <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            </div>
+            <p class="text-[8px] text-gray-500 uppercase tracking-widest mt-1 mb-2 font-black">TikTok Dialogue Board v2.5</p>
+            <div class="text-xs md:text-sm font-black p-3 text-pink-100 bg-black/40 rounded-lg leading-relaxed" x-text="quoteLog"></div>
+          </div>
+
+          <!-- Subtitle selection list -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-3xl mx-auto pt-2 w-full">
+            <template x-for="item in quotes" :key="item.phrase">
+              <div 
+                @click="playQuote(item.phrase, item.stamp)"
+                :class="isDarkMode ? 'bg-[#3a0820] border-pink-900/40' : 'bg-white border-pink-100'"
+                class="p-3 rounded-xl shadow-sm cursor-pointer hover:shadow-md transition-all active:scale-95 group text-left border"
+              >
+                <div class="flex justify-between items-start gap-1">
+                  <span class="text-[8px] bg-pink-100 text-pink-700 font-extrabold px-1.5 py-0.5 rounded" x-text="item.stamp"></span>
+                  <span class="text-gray-300 group-hover:text-pink-500 text-[10px] font-bold">▶ Load</span>
+                </div>
+                <p :class="isDarkMode ? 'text-pink-100' : 'text-gray-800'" class="mt-2 font-black text-[11px] md:text-xs" x-text="'&ldquo;' + item.phrase + '&rdquo;'"></p>
+                <p :class="isDarkMode ? 'text-pink-200/60' : 'text-gray-400'" class="text-[10px] mt-0.5 leading-relaxed" x-text="item.context"></p>
+              </div>
+            </template>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <!-- Wholesome Footer Section -->
+    <footer class="text-center text-[10px] text-gray-400 mt-12 pb-4 space-y-1 w-full">
+      <p>© 2026 Esli Mendez Fan Hub. Created with love, safe and healthy for community teenagers.</p>
+      <p>All photo assets and references are properties of their respective creators.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
